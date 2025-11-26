@@ -1,0 +1,724 @@
+@font-face {
+  font-family: "Fredoka";
+  src: url("aset/Fredoka/static/Fredoka-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 90px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-icon img, .user-iconbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: 28px;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+
+
+/* === HERO SECTION === */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ade8f4;
+  padding: 60px 80px;
+}
+
+.hero-text {
+  max-width: 45%;
+}
+
+.hero-text h1 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #0f1b5d;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn-petualang {
+  background-color: #ffa62b;
+  border: none;
+  width: 310px;
+  height: 53px;
+  padding: 12px 28px;
+  border-radius: 66px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-petualang:hover {
+  transform: scale(1.05);
+}
+.btn-petualang a {
+  color: #000000;
+  text-underline-position: none;
+}
+
+.hero-image img {
+  width: 665px;
+  height: auto;
+  border-radius: 67px;
+}
+
+/* === FITUR === */
+.fitur-section {
+  text-align: center;
+  padding: 120px 60px;
+  background-color: #ffffff;
+  min-height: 930px;
+}
+
+.fitur-section h2 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  margin-top: none;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #0f1b5d;
+}
+
+.fitur-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  row-gap: 30px;
+  justify-content: center;
+  align-items: start;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 400px;
+  height: 280px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+}
+
+.card img {
+  height: 105px;
+  margin-bottom: 15px;
+}
+.card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.card h3 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  color: #0f1b5d;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #ade8f4;
+  margin-top: 90px;
+  padding: 60px 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  color: #0f1b5d;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  font-weight: 600;
+}
+
+.footer p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #000000;
+  margin: 0;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 75%;
+  padding-bottom: 10px;
+}
+.logo-footer img {
+  width: 183px;
+  height: 69;
+  display: block;
+}
+
+.tentangkami,
+.alamatkami,
+.kontakkami {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.alamatkami {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.alamatkami .alamat-icn {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.alamatkami img {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+
+.footer-flexbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-flexbox img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.footer-flexbox img:hover {
+  transform: scale(1.1);
+}
+
+.footer .contact-info img {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #000000;
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  /* Navbar */
+  .navbar {
+    padding: 15px 40px;
+  }
+  
+  .nav-links {
+    gap: 40px;
+  }
+  
+  .nav-links a {
+    font-size: 14px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 50px 40px;
+  }
+  
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  
+  .hero-text p {
+    font-size: 15px;
+  }
+  
+  .btn-petualang {
+    width: 280px;
+    height: 50px;
+    font-size: 18px;
+  }
+  
+  .hero-image img {
+    width: 500px;
+    height: 276px;
+  }
+  
+  /* Fitur Section */
+  .fitur-section {
+    padding: 80px 40px;
+    min-height: auto;
+  }
+  
+  .fitur-section h2 {
+    font-size: 32px;
+  }
+  
+  .fitur-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    column-gap: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    min-height: 260px;
+    margin: 0 auto;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 50px 40px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* MOBILE LANDSCAPE & SMALL TABLET */
+@media screen and (max-width: 767px) {
+  /* Navbar */
+  .navbar {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo img {
+    height: 35px;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-btn {
+    gap: 10px;
+  }
+  
+  .btn-masuk, .btn-daftar {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .hero-text h1 {
+    font-size: 28px;
+  }
+  
+  .hero-text p {
+    font-size: 14px;
+  }
+  
+  .btn-petualang {
+    width: 100%;
+    max-width: 280px;
+    height: 48px;
+    font-size: 16px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+  
+  /* Fitur Section */
+  .fitur-section {
+    padding: 60px 20px;
+  }
+  
+  .fitur-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .fitur-grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 240px;
+  }
+  
+  .card h3 {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+  
+  .card img {
+    height: 90px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 40px 20px;
+    margin-top: 60px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .logo-footer {
+    order: -1;
+    justify-content: center;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  
+  .logo-footer img {
+    width: 150px;
+  }
+  
+  .tentangkami, .alamatkami, .kontakkami {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .alamatkami .alamat-icn {
+    justify-content: center;
+  }
+  
+  .footer-flexbox {
+    justify-content: center;
+  }
+  
+  .footer .copyright {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}
+
+/* MOBILE PORTRAIT */
+@media screen and (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    padding: 10px 15px;
+  }
+  
+  .logo img {
+    height: 30px;
+  }
+  
+  .btn-masuk, .btn-daftar {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 30px 15px;
+  }
+  
+  .hero-text h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-text p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-petualang {
+    width: 100%;
+    max-width: 250px;
+    height: 45px;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  /* Fitur Section */
+  .fitur-section {
+    padding: 50px 15px;
+  }
+  
+  .fitur-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    padding: 18px;
+    min-height: 220px;
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  
+  .card p {
+    font-size: 13px;
+  }
+  
+  .card img {
+    height: 80px;
+    margin-bottom: 12px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 30px 15px;
+    margin-top: 50px;
+  }
+  
+  .footer h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .footer p {
+    font-size: 9px;
+  }
+  
+  .logo-footer img {
+    width: 130px;
+  }
+  
+  .footer .copyright {
+    font-size: 11px;
+    margin-top: 25px;
+  }
+}
+/* === HAMBURGER === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+/* HAMBURGER ACTIVE ANIMATION */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* DROPDOWN NAV FOR MOBILE */
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: translateY(-300px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.35s ease;
+  }
+
+  .nav-links.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+  }
+}
+/* User icon di dalam hamburger */
+.mobile-user-icon {
+  display: none;
+  text-align: center;
+}
+
+.mobile-user-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Sembunyikan user-icon asli di mobile */
+@media (max-width: 767px) {
+  .user-icon {
+    display: none;
+  }
+
+  .mobile-user-icon {
+    display: block;
+    margin-top: 10px;
+  }
+}
+/* Pindahkan hamburger ke posisi user-icon (kanan) */
+@media (max-width: 767px) {
+  .navbar {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 20px;   /* Jarak dari kanan */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+

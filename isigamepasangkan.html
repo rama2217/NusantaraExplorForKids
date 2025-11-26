@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tarik Garis Pakaian Adat</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+@font-face {
+  font-family: "Fredoka";
+  src: url("aset/Fredoka/static/Fredoka-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 45px;
+}
+
+nav {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 90px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-icon img, .user-iconbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: 28px;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  /* Navbar */
+  .navbar {
+    padding: 15px 40px;
+  }
+  
+  .nav-links {
+    gap: 40px;
+  }
+  
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+/* MOBILE LANDSCAPE & SMALL TABLET */
+@media screen and (max-width: 767px) {
+  /* Navbar */
+  .navbar {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo img {
+    height: 35px;
+  }
+  
+  .nav-btn {
+    gap: 10px;
+  }}
+  /* MOBILE PORTRAIT */
+@media screen and (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    padding: 10px 15px;
+  }
+  
+  .logo img {
+    height: 30px;
+  }}
+  /* === HAMBURGER === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+/* HAMBURGER ACTIVE ANIMATION */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* DROPDOWN NAV FOR MOBILE */
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+  }
+
+  .nav-links.show {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+  }
+}
+/* User icon di dalam hamburger */
+.mobile-user-icon {
+  display: none;
+  text-align: center;
+}
+
+.mobile-user-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Sembunyikan user-icon asli di mobile */
+@media (max-width: 767px) {
+  .user-icon {
+    display: none;
+  }
+
+  .mobile-user-icon {
+    display: block;
+    margin-top: 10px;
+  }
+}
+/* Pindahkan hamburger ke posisi user-icon (kanan) */
+@media (max-width: 767px) {
+  .navbar {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.game-title {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+/* --- Area Pencocokan (Flex Container) --- */
+.matching-area {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    position: relative;
+    width: 100%; 
+}
+
+/* --- Kolom Kiri dan Kanan --- */
+.column {
+    width: 45%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10; /* Pastikan elemen-elemen ini di atas kanvas */
+}
+        
+/* --- Elemen Titik (Pakaian Adat & Provinsi) --- */
+.match-point {
+    padding: 10px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative; 
+}
+
+/* Background hanya untuk kotak KIRI (gambar) */
+#sources-container .match-point {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Kotak KANAN (provinsi) TANPA background */
+#targets-container .match-point {
+    background-color: #f9f9f9;
+    box-shadow: #00000020 0px 4px 8px;
+    border-radius: 10px;
+}
+
+/* Titik yang sudah berhasil dipasangkan */
+.match-point.matched {
+    border-color: #28a745;
+    cursor: default;
+}
+
+
+#sources-container .match-point {
+    width: 150px; 
+    height: 150px; 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px; /* Sembunyikan teks 'Ulee Balang' dll. */
+    overflow: hidden;
+}
+/* --- Elemen Titik di Kanan (Provinsi) --- */
+#targets-container .match-point {
+    background-color: #f9f9f9;
+    box-shadow: #00000020 0px 4px 8px;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px; 
+    height: 90px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin: 0;
+    font-size: 16px;
+}
+/* --- Kolom Kanan: Container Target --- */
+#targets-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+    z-index: 10;
+    align-items: flex-end; 
+}
+
+/* --- Kanvas --- */
+#matching-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5; /* Di bawah elemen match-point */
+}
+
+/* --- FEEDBACK --- */
+#feedback {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    min-height: 40px;
+    text-align: center;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#restart-button:hover {
+    background-color: #e68a00;
+}
+    </style>
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+      <img src="aset/logoNexkids.png" alt="Logo NEXKIDS">
+    </div>
+    <button class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+    <ul class="nav-links">
+        <li><a href="landingpagesdlg.html">Beranda</a></li>
+        <li><a href="peta.html">Peta</a></li>
+        <li><a href="videoanimasi.html">Video</a></li>
+        <li><a href="" class="active">Game</a></li>
+        <li><a href="lencana.html">Lencana</a></li>
+        <li class="mobile-user-icon"><a href="manajemenAkun.html"><img src="aset/user.png" alt="User"></a></li>
+      </ul>
+    </nav>
+      <div class="user-icon">
+      <button class="user-iconbtn"><a href="manajemenAkun.html"><img src="aset/user.png" alt="User"></a></button>      
+      </div>
+</header>
+
+<h1 class="game-title">Pasangkan Pakaian Adat</h1>
+    <main class="game-container">
+        
+        
+        <div class="matching-area">
+            
+            <div id="sources-container" class="column">
+                </div>
+
+            <canvas id="matching-canvas"></canvas>
+
+            <div id="targets-container" class="column">
+                </div>
+        </div>
+        
+        <div id="feedback"></div>
+        <button id="restart-button" style="display: none;">Main Lagi</button>
+    </main>
+
+    <script>
+        // Toggle hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('show');
+    });
+
+    // Close menu when clicking on a link
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('show');
+        });
+    });
+}
+// Data Game: Pakaian Adat (Sumber Gambar) - Provinsi (Target Teks)
+const gameData = [
+    // PERHATIAN: Pastikan file gambar ini ada di folder 'aset/' Anda
+    { id: 'a', source: 'Ulee Balang', target: 'Aceh', image: 'aset/bajuaceh.svg' },
+    { id: 'b', source: 'Kebaya Sunda', target: 'Jawa Barat', image: 'aset/bajukebayasunda.svg' },
+    { id: 'c', source: 'Payas Agung', target: 'Bali', image: 'aset/bajubali.svg' },
+    { id: 'd', source: 'King Baba', target: 'Kalimantan Barat', image: 'aset/bajudayak.svg' },
+    { id: 'e', source: 'Koteka', target: 'Papua', image: 'aset/bajupapua.svg' },
+];
+// ... sisa kode JavaScript Anda ...
+        
+        // --- Variabel Kanvas & Game ---
+        const canvas = document.getElementById('matching-canvas');
+        const ctx = canvas.getContext('2d');
+        const matchingArea = document.querySelector('.matching-area');
+        const feedbackElement = document.getElementById('feedback');
+        const restartButton = document.getElementById('restart-button');
+
+        let isDrawing = false;
+        let activeSourceElement = null;
+        let lines = []; // Menyimpan garis yang sudah benar
+        let matchedCount = 0;
+        const totalMatches = gameData.length;
+
+        // --- Atur Ukuran Kanvas ---
+        function resizeCanvas() {
+            const rect = matchingArea.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+            canvas.style.left = '0px';
+            canvas.style.top = '0px';
+            drawLines(); // Gambar ulang garis saat ukuran berubah
+        }
+        window.addEventListener('resize', resizeCanvas);
+        
+        /**
+         * Mengambil koordinat pusat 'connection point' dari sebuah elemen.
+         * @param {HTMLElement} element - Elemen sumber atau target.
+         * @returns {{x: number, y: number}} Koordinat relatif terhadap Kanvas.
+         */
+        function getConnectionPoint(element) {
+            const areaRect = matchingArea.getBoundingClientRect();
+            const elementRect = element.getBoundingClientRect();
+            
+            // X: Pusat elemen. Jika sumber (kiri), X adalah titik paling kanan elemen.
+            // X: Jika target (kanan), X adalah titik paling kiri elemen.
+            let x;
+            if (element.parentNode.id === 'sources-container') {
+                // Titik koneksi di kanan sumber (sepanjang border oranye)
+                x = elementRect.right - areaRect.left;
+            } else { 
+                // Titik koneksi di kiri target (sepanjang border biru)
+                x = elementRect.left - areaRect.left;
+            }
+            
+            // Y: Titik tengah vertikal
+            const y = (elementRect.top + elementRect.bottom) / 2 - areaRect.top;
+            
+            return { x, y };
+        }
+
+        /**
+         * Menggambar semua garis yang sudah terpasang.
+         */
+        function drawLines() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            lines.forEach(line => {
+                ctx.strokeStyle = line.color; // Garis yang benar berwarna hijau
+                ctx.lineWidth = 4;
+                ctx.beginPath();
+                ctx.moveTo(line.start.x, line.start.y);
+                ctx.lineTo(line.end.x, line.end.y);
+                ctx.stroke();
+            });
+        }
+        
+        /**
+         * Membuat elemen sumber (Pakaian Adat) dan target (Provinsi).
+         */
+        function createGameElements() {
+            const sourcesContainer = document.getElementById('sources-container');
+            const targetsContainer = document.getElementById('targets-container');
+            
+            // Acak data untuk target (Provinsi)
+            const shuffledTargets = [...gameData].sort(() => Math.random() - 0.5);
+
+// ... di dalam fungsi createGameElements()...
+
+// Buat Sumber (Pakaian Adat - GAMBAR)
+gameData.forEach(data => {
+    const sourceDiv = document.createElement('div');
+    sourceDiv.className = 'match-point source';
+    sourceDiv.id = `source-${data.id}`;
+    
+    // 🔄 PERUBAHAN: Gunakan gambar sebagai latar belakang
+    sourceDiv.style.backgroundImage = `url(${data.image})`;
+    
+    // Teks tetap dimasukkan tetapi disembunyikan oleh CSS (text-indent)
+    sourceDiv.textContent = data.source; 
+    
+    sourceDiv.setAttribute('data-id', data.id);
+    sourceDiv.addEventListener('mousedown', handleMouseDown);
+    sourceDiv.addEventListener('touchstart', handleTouchStart);
+    sourcesContainer.appendChild(sourceDiv);
+});
+
+// ... sisa fungsi createGameElements()...
+
+            // Buat Target (Provinsi)
+            shuffledTargets.forEach(data => {
+                const targetDiv = document.createElement('div');
+                targetDiv.className = 'match-point target';
+                targetDiv.id = `target-${data.id}`;
+                targetDiv.textContent = data.target;
+                targetDiv.setAttribute('data-id', data.id);
+                // Tidak perlu event listener di sini, Kanvas yang akan menangani drop
+                targetsContainer.appendChild(targetDiv);
+            });
+            
+            // Atur ukuran kanvas setelah elemen dimuat
+            resizeCanvas();
+        }
+
+        /**
+         * --- EVENT HANDLERS (MOUSE & TOUCH) ---
+         */
+        
+        function getCanvasCoordinates(e) {
+            const rect = canvas.getBoundingClientRect();
+            let clientX, clientY;
+            
+            if (e.touches && e.touches.length > 0) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+            
+            return {
+                x: clientX - rect.left,
+                y: clientY - rect.top
+            };
+        }
+
+        function handleMouseDown(e) {
+            if (e.target.classList.contains('matched')) return; // Jangan mulai jika sudah dipasangkan
+            
+            activeSourceElement = e.target;
+            const startPoint = getConnectionPoint(activeSourceElement);
+            
+            isDrawing = true;
+            lines.push({ 
+                start: startPoint, 
+                end: { x: startPoint.x, y: startPoint.y }, 
+                id: activeSourceElement.getAttribute('data-id'), 
+                color: '#007bff80' // Garis sementara (biru transparan)
+            });
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+        }
+        
+        function handleTouchStart(e) {
+             // Cegah scroll saat menarik garis
+            e.preventDefault(); 
+            handleMouseDown(e);
+        }
+
+        function handleMouseMove(e) {
+            if (!isDrawing) return;
+            
+            const coords = getCanvasCoordinates(e);
+            
+            // Perbarui titik akhir garis terakhir (garis yang sedang ditarik)
+            lines[lines.length - 1].end = coords;
+            
+            drawLines();
+        }
+
+        function handleTouchMove(e) {
+            e.preventDefault();
+            handleMouseMove(e);
+        }
+
+        function handleMouseUp(e) {
+            if (!isDrawing) return;
+            isDrawing = false;
+            
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+
+            const lastLine = lines[lines.length - 1];
+            
+            // --- Cek apakah kursor berakhir di atas TARGET yang valid ---
+            
+            const targetElements = document.querySelectorAll('.match-point.target:not(.matched)');
+            let isMatched = false;
+            
+            // Dapatkan koordinat akhir kursor relatif terhadap viewport
+            const finalX = e.clientX;
+            const finalY = e.clientY;
+
+            targetElements.forEach(target => {
+                const targetRect = target.getBoundingClientRect();
+                
+                // Cek apakah koordinat akhir kursor berada di dalam area target
+                if (finalX >= targetRect.left && finalX <= targetRect.right &&
+                    finalY >= targetRect.top && finalY <= targetRect.bottom) {
+                    
+                    const targetId = target.getAttribute('data-id');
+                    
+                    if (targetId === lastLine.id) {
+                        // BENAR!
+                        isMatched = true;
+                        
+                        const endPoint = getConnectionPoint(target);
+                        lastLine.end = endPoint;
+                        lastLine.color = '#28a745'; // Ubah warna menjadi hijau permanen
+                        
+                        target.classList.add('matched');
+                        activeSourceElement.classList.add('matched');
+                        
+                        feedbackElement.textContent = "✅ Benar! Pasangan berhasil.";
+                        matchedCount++;
+                        
+                        if (matchedCount === totalMatches) {
+                            setTimeout(displayResults, 500);
+                        }
+                        
+                    }
+                }
+            });
+
+            if (!isMatched) {
+                // SALAH: Hapus garis yang terakhir ditarik (garis sementara)
+                lines.pop();
+                feedbackElement.textContent = "❌ Salah! Coba lagi.";
+            }
+
+            drawLines();
+            activeSourceElement = null; // Reset sumber aktif
+        }
+        
+        function handleTouchEnd(e) {
+            // Karena touchEnd tidak membawa koordinat, kita simulasikan MouseUp
+            // dengan koordinat terakhir dari touchMove (diabaikan untuk kerangka ini, 
+            // umumnya lebih baik menggunakan library untuk touch events)
+            handleMouseUp(e); 
+        }
+
+        /**
+         * --- LOGIKA TAMBAHAN ---
+         */
+        
+        function displayResults() {
+            feedbackElement.innerHTML = `<h2>🥳 Selamat! Anda berhasil menyelesaikan semua pasangan!</h2>`;
+            restartButton.style.display = 'block';
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+            // Hapus event listener touch
+            canvas.removeEventListener('touchmove', handleTouchMove);
+            canvas.removeEventListener('touchend', handleTouchEnd);
+        }
+
+        function restartGame() {
+            lines = [];
+            matchedCount = 0;
+            isDrawing = false;
+            activeSourceElement = null;
+            feedbackElement.textContent = '';
+            restartButton.style.display = 'none';
+            
+            // Kosongkan dan buat ulang elemen
+            document.getElementById('sources-container').innerHTML = '';
+            document.getElementById('targets-container').innerHTML = '';
+            
+            createGameElements();
+            drawLines();
+        }
+        
+        // Hubungkan event listener touch setelah DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            canvas.addEventListener('touchmove', handleTouchMove);
+            canvas.addEventListener('touchend', handleTouchEnd);
+            restartButton.addEventListener('click', restartGame);
+            
+            // Mulai Game
+            createGameElements();
+            resizeCanvas(); 
+        });
+        
+    </script>
+</body>
+</html>

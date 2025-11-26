@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Akun - NEXKIDS</title>
+  <link rel="stylesheet" href="profilsaya.css">
+  <script defer src="profilsaya.js"></script>
+</head>
+<body>
+  
+<header class="navbar">
+    <div class="logo">
+      <a href ="landingpagesdlg.html"><img src="aset/logoNexkids.png" alt="Logo NEXKIDS"></a>
+    </div>
+  <div class="user-icon">
+        <button class="user-iconbtn" class="active"><img src="aset/user.png" alt="User"></button>
+      </div>
+  </header>
+
+<div class="container">
+<aside class="sidebar">           
+    <div class="profile">
+     <div class="profile-picture"><img src="aset/indoapr95j.png"></div>
+     <div class="profile-name">Rizki Alamsyah</div>
+     <div class="profile-role">Petualang Cilik</div>
+    </div>
+
+<ul class="menu">
+   <li class="menu-item" onclick="window.location.href='manajemenAkun.html'">
+        <img src="aset/dashboard.png">
+       Dasbor
+   </li>
+   <li class="menu-item active">
+       <img src="aset/usermanajemen.png">
+       Profil Saya
+   </li>
+   <li class="menu-item"  onclick="window.location.href='koleksilencana.html'">
+          <img src="aset/stamp-collecting.png">
+       Koleksi Lencana
+   </li>
+   <li class="menu-item" onclick="window.location.href='kemajuansaya.html'">
+       <img src="aset/progres.png">
+       Kemajuan Saya
+   </li>
+   <li class="menu-item" onclick="window.location.href='masuk.html'">
+       <img src="aset/logout.png">
+       Keluar Akun
+   </li>
+ </ul>
+</aside>
+
+  <main class="main-content">
+    <div class="profile-edit-wrapper">
+    <div class="profile-edit-card">
+        <div class="profile-photo-section">
+            <div class="profile-photo">
+            <img src="aset/indoapr95j.png" alt="Profile">
+            </div>
+            <button class="edit-photo-btn">Edit Foto Profil</button>
+        </div>
+        <div class="profile-form">
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" value="jerome@gmail.com" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <div class="input-with-button">
+                <input type="text" id="nama" value="Rizki Alamsyah" readonly>
+                <button class="edit-field-btn" data-field="nama">Edit</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-with-button">
+                <input type="password" id="password" value="12345##" readonly>
+                <button class="toggle-password-btn" type="button">
+                <img src="aset/show.png" class="password-toggle-icon"></button>
+                <button class="edit-field-btn" data-field="password">Edit</button>
+                </div>
+            </div>
+            <button class="save-changes-btn">Simpan Perubahan</button>
+        </div>
+    </div>
+    </div>
+    </main>
+    </div>
+    <script src ="profilsaya.js"></script>
+</body>
+</html>

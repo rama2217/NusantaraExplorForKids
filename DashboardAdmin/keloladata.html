@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Data Media - Nusantara for kids</title>
+    <link rel="stylesheet" href="keloladata.css">
+</head>
+<body>
+<div class="dashboard-container"> 
+<!-- ========== SIDEBAR (MENU KIRI) ========== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+      <img src="../aset/logoNexkids.png" 
+           alt="NexKids Logo" 
+           class="logo">
+      <div class="admin-profile">
+          <img src="https://i.pravatar.cc/150?img=12"
+               alt="Admin" 
+               class="profile-pic">
+          <span class="profile-name">Martin</span>
+      </div>
+  </div>
+  
+<nav class="sidebar-nav">
+    <ul>
+        <li><a href="dashboard.html">
+            <img src="../aset/information.png" alt="Data Pengguna Icon" class="sidebar-icon"> 
+            <span>Data Pengguna</span>
+        </a></li>
+        <li class="active"><a href="keloladata.html">
+            <img src="../aset/add.png" alt="Tambah Media Icon" class="sidebar-icon"> 
+            <span>Kelola data</span>
+        </a></li>
+        <li><a href="setting.html">
+            <img src="../aset/settings.png" alt="Settings Icon" class="sidebar-icon"> 
+            <span>Settings</span>
+        </a></li>
+        <li class="logout-item"><a href="#" id="logout-btn">
+            <img src="../aset/logout.png" alt="Keluar Icon" class="sidebar-icon"> 
+            <span>Keluar</span>
+        </a></li>
+    </ul>
+</nav>
+<button class="toggle-sidebar" id="toggle-sidebar" title="Perkecil Menu">
+      <span>➔</span>
+</button>
+</aside>
+
+<!-- ========== KONTEN UTAMA ========== -->
+<main class="main-content">
+    <header class="main-header">
+        <h1>Kelola Data Media</h1>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" title="Buka Menu">☰</button>
+    </header>
+
+    <!-- Tabs Navigation -->
+    <div class="content-tabs">
+        <button class="tab-btn active" data-tab="peta">Peta</button>
+        <button class="tab-btn" data-tab="gambar">Gambar</button>
+        <button class="tab-btn" data-tab="video">Video</button>
+    </div>
+
+    <!-- Tab Content: Peta -->
+    <div id="peta-tab" class="tab-content active">
+        <div class="card">
+            <div class="table-header">
+                <h3>Data Peta</h3>
+                <button class="btn btn-primary" onclick="openAddModal('peta')">
+                    <span>+</span> Tambah Peta
+                </button>
+            </div>
+            
+            <div class="search-filter">
+                <div class="search-container">
+                    <img src="../aset/search.png" alt="Search Icon">
+                    <input type="search" id="search-peta" placeholder="Cari nama peta...">
+                </div>
+                <select class="filter-select">
+                    <option value="semua">Semua Provinsi</option>
+                    <option value="jawa">Jawa</option>
+                    <option value="sumatera">Sumatera</option>
+                    <option value="kalimantan">Kalimantan</option>
+                    <option value="sulawesi">Sulawesi</option>
+                    <option value="nusatenggara">Nusa Tenggara</option>
+                    <option value="papua">Papua</option>
+                </select>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Preview</th>
+                            <th>Nama Peta</th>
+                            <th>Provinsi</th>
+                            <th>Tipe</th>
+                            <th>Tanggal Upload</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="peta-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td><img src="https://placehold.co/60x60/388E3C/FFFFFF?text=P1" class="thumbnail" alt="Preview Peta"></td>
+                            <td>Peta Provinisi Jawa Timur</td>
+                            <td>Jawa Timur</td>
+                            <td><span class="badge badge-interactive">Interaktif</span></td>
+                            <td>18 Nov 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-edit" onclick="editItem('peta', 1)" title="Edit">
+                                        <img src="../aset/edit.png" alt="Edit">
+                                    </button>
+                                    <button class="btn-icon btn-delete" onclick="deleteItem('peta', 1)" title="Hapus">
+                                        <img src="../aset/delete.png" alt="Delete">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="https://placehold.co/60x60/388E3C/FFFFFF?text=P2" class="thumbnail" alt="Preview Peta"></td>
+                            <td>Peta Pulau Bali</td>
+                            <td>Bali</td>
+                            <td><span class="badge badge-static">Statik</span></td>
+                            <td>17 Nov 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-edit" onclick="editItem('peta', 2)" title="Edit">
+                                        <img src="../aset/edit.png" alt="Edit">
+                                    </button>
+                                    <button class="btn-icon btn-delete" onclick="deleteItem('peta', 2)" title="Hapus">
+                                        <img src="../aset/delete.png" alt="Delete">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <nav class="pagination">
+                <a href="#" class="page-arrow">&laquo;</a>
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <a href="#" class="page-arrow">&raquo;</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Tab Content: Gambar -->
+    <div id="gambar-tab" class="tab-content">
+        <div class="card">
+            <div class="table-header">
+                <h3>Data Gambar</h3>
+                <button class="btn btn-primary" onclick="openAddModal('gambar')">
+                    <span>+</span> Tambah Gambar
+                </button>
+            </div>
+            
+            <div class="search-filter">
+                <div class="search-container">
+                    <img src="../aset/search.png" alt="Search Icon">
+                    <input type="search" id="search-gambar" placeholder="Cari judul gambar...">
+                </div>
+                <select class="filter-select">
+                   <option value="semua">Semua Provinsi</option>
+                    <option value="jawa">Jawa</option>
+                    <option value="sumatera">Sumatera</option>
+                    <option value="kalimantan">Kalimantan</option>
+                    <option value="sulawesi">Sulawesi</option>
+                    <option value="nusatenggara">Nusa Tenggara</option>
+                    <option value="papua">Papua</option>
+                </select>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Thumbnail</th>
+                            <th>Judul</th>
+                            <th>Provinsi</th>
+                            <th>Kategori</th>
+                            <th>Tanggal Upload</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gambar-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td><img src="https://placehold.co/60x60/FF9800/FFFFFF?text=G1" class="thumbnail" alt="Thumbnail Gambar"></td>
+                            <td>Batik Parang Klasik</td>
+                            <td>Jawa Tengah</td>
+                            <td><span class="badge badge-budaya">Budaya</span></td>
+                            <td>20 Nov 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-edit" onclick="editItem('gambar', 1)" title="Edit">
+                                        <img src="../aset/edit.png" alt="Edit">
+                                    </button>
+                                    <button class="btn-icon btn-delete" onclick="deleteItem('gambar', 1)" title="Hapus">
+                                        <img src="../aset/delete.png" alt="Delete">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="https://placehold.co/60x60/FF9800/FFFFFF?text=G2" class="thumbnail" alt="Thumbnail Gambar"></td>
+                            <td>Tari Kecak Bali</td>
+                            <td>Bali</td>
+                            <td><span class="badge badge-seni">Seni</span></td>
+                            <td>19 Nov 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-edit" onclick="editItem('gambar', 2)" title="Edit">
+                                        <img src="../aset/edit.png" alt="Edit">
+                                    </button>
+                                    <button class="btn-icon btn-delete" onclick="deleteItem('gambar', 2)" title="Hapus">
+                                        <img src="../aset/delete.png" alt="Delete">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <nav class="pagination">
+                <a href="#" class="page-arrow">&laquo;</a>
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <a href="#" class="page-arrow">&raquo;</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Tab Content: Video -->
+    <div id="video-tab" class="tab-content">
+        <div class="card">
+            <div class="table-header">
+                <h3>Data Video</h3>
+                <button class="btn btn-primary" onclick="openAddModal('video')">
+                    <span>+</span> Tambah Video
+                </button>
+            </div>
+            
+            <div class="search-filter">
+                <div class="search-container">
+                    <img src="../aset/search.png" alt="Search Icon">
+                    <input type="search" id="search-video" placeholder="Cari judul video...">
+                </div>
+                <select class="filter-select">
+                    <option value="semua">Semua Provinsi</option>
+                    <option value="jawa">Jawa</option>
+                    <option value="sumatera">Sumatera</option>
+                    <option value="kalimantan">Kalimantan</option>
+                    <option value="sulawesi">Sulawesi</option>
+                    <option value="nusatenggara">Nusa Tenggara</option>
+                    <option value="papua">Papua</option>
+                </select>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Thumbnail</th>
+                            <th>Judul</th>
+                            <th>Provinsi</th>
+                            <th>Durasi</th>
+                            <th>Tanggal Upload</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="video-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td><img src="https://placehold.co/60x60/1976D2/FFFFFF?text=V1" class="thumbnail" alt="Thumbnail Video"></td>
+                            <td>Tari Saman dari Aceh</td>
+                            <td>Aceh</td>
+                            <td>5:30</td>
+                            <td>20 Nov 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-edit" onclick="editItem('video', 1)" title="Edit">
+                                        <img src="../aset/edit.png" alt="Edit">
+                                    </button>
+                                    <button class="btn-icon btn-delete" onclick="deleteItem('video', 1)" title="Hapus">
+                                        <img src="../aset/delete.png" alt="Delete">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="https://placehold.co/60x60/1976D2/FFFFFF?text=V2" class="thumbnail" alt="Thumbnail Video"></td>
+                            <td>Wayang Kulit Jawa</td>
+                            <td>Jawa Tengah</td>
+                            <td>8:15</td>
+                            <td>19 Nov 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-edit" onclick="editItem('video', 2)" title="Edit">
+                                        <img src="../aset/edit.png" alt="Edit">
+                                    </button>
+                                    <button class="btn-icon btn-delete" onclick="deleteItem('video', 2)" title="Hapus">
+                                        <img src="../aset/delete.png" alt="Delete">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <nav class="pagination">
+                <a href="#" class="page-arrow">&laquo;</a>
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <a href="#" class="page-arrow">&raquo;</a>
+            </nav>
+        </div>
+    </div>
+</main>
+</div>
+
+<!-- Modal Edit/Add -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modal-title">Tambah Data</h2>
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+        </div>
+        <form id="media-form">
+            <div class="form-group">
+                <label for="media-title">Judul/Nama</label>
+                <input type="text" id="media-title" placeholder="Masukkan judul..." required>
+            </div>
+            <div class="form-group">
+                <label for="media-province">Provinsi</label>
+                <input type="text" id="media-province" placeholder="Contoh: Jawa Timur" required>
+            </div>
+            <div class="form-group" id="media-category-group">
+                <label for="media-category">Kategori</label>
+                <select id="media-category">
+                    <option>Budaya</option>
+                    <option>Seni</option>
+                    <option>Sejarah</option>
+                    <option>Wisata</option>
+                </select>
+            </div>
+            <div class="form-group" id="media-type-group" style="display:none;">
+                <label for="media-type">Tipe Peta</label>
+                <select id="media-type">
+                    <option>Interaktif</option>
+                    <option>Statik</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="media-file">Upload File</label>
+                <input type="file" id="media-file" required>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeModal()">Batal</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Konfirmasi Delete -->
+<div id="delete-modal" class="modal">
+    <div class="modal-content modal-small">
+        <div class="modal-header">
+            <h2>Konfirmasi Hapus</h2>
+            <button class="close-btn" onclick="closeDeleteModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>Apakah Anda yakin ingin menghapus data ini?</p>
+            <p class="warning-text">Data yang dihapus tidak dapat dikembalikan.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="closeDeleteModal()">Batal</button>
+            <button type="button" class="btn btn-danger" onclick="confirmDelete()">Hapus</button>
+        </div>
+    </div>
+</div>
+
+<script src="keloladata.js"></script>
+</body>
+</html>

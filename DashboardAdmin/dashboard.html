@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard-Nusantara for kids</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- ========== SIDEBAR (MENU KIRI) ========== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <!-- Fallback in case image fails -->
+                <img src="../aset/logoNexkids.png" 
+                     alt="NexKids Logo" 
+                     class="logo">
+                
+                <div class="admin-profile">
+                    <img src="https://i.pravatar.cc/150?img=12"
+                         alt="Admin" 
+                         class="profile-pic">
+                    <span class="profile-name">Martin</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <!-- Ikon Sidebar sudah menggunakan gambar (placeholder) -->
+                    <li class="active"><a href="#">
+                        <img src="../aset/information.png" alt="Data Pengguna Icon" class="sidebar-icon"> 
+                        <span>Data Pengguna</span>
+                    </a></li>
+                    <li><a href="keloladata.html">
+                        <img src="../aset/add.png" alt="Tambah Media Icon" class="sidebar-icon"> 
+                        <span>Kelola data</span>
+                    </a></li>
+                    <li><a href="setting.html">
+                        <img src="../aset/settings.png" alt="Settings Icon" class="sidebar-icon"> 
+                        <span>Settings</span>
+                    </a></li>
+                    <!-- Tombol Keluar (Logout) -->
+                    <li class="logout-item"><a href="#" id="logout-btn">
+                        <img src="../aset/logout.png" alt="Keluar Icon" class="sidebar-icon"> 
+                        <span>Keluar</span>
+                    </a></li>
+                </ul>
+            </nav>
+
+            <button class="toggle-sidebar" id="toggle-sidebar" title="Perkecil Menu">
+                <span><img src="../aset/arrow.png"></span>
+            </button>
+        </aside>
+
+        <!-- ========== KONTEN UTAMA (KANAN) ========== -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Dashboard Admin</h1>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" title="Buka Menu">☰</button>
+            </header>
+
+            <!-- Kartu Statistik (Total Pengguna & Aktif) -->
+            <section class="stats-cards">
+                <!-- MENGGANTI IKON EMJOI PENGGUNA DENGAN GAMBAR (PLACEHOLDER) -->
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="../aset/approve.png" alt="Total Pengguna Icon" class="stat-icon">
+                    </div>
+                    <div class="card-info">
+                        <span class="card-title">Total Pengguna</span>
+                        <span class="card-value">100</span>
+                    </div>
+                </div>
+                <!-- MENGGANTI IKON EMJOI AKTIF DENGAN GAMBAR (PLACEHOLDER) -->
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="../aset/user.png" alt="Aktif Icon" class="stat-icon">
+                    </div>
+                    <div class="card-info">
+                        <span class="card-title">Sekarang Aktif</span>
+                        <span class="card-value">50</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tabel Pengguna -->
+<section class="user-table-section">
+    <div class="table-header">
+        <div class="search-container">
+            <img src="../aset/search.png" alt="Cari Icon">
+            <input type="search" id="search-input" placeholder="Cari nama pengguna...">
+        </div>
+        <select class="sort-select" aria-label="Urutkan pengguna">
+            <option value="terbaru">Urut dari: Terbaru</option>
+            <option value="terlama">Urut dari: Terlama</option>
+        </select>
+    </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nama Pengguna</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-table-body">
+                            <!-- Data dummy. Di aplikasi nyata, ini di-generate -->
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://i.pravatar.cc/40?img=1" alt="Avatar" onerror="this.src='https://placehold.co/40x40/EEE/777?text=KW'; this.onerror=null;">
+                                        <span>Kristin Watson</span>
+                                    </div>
+                                </td>
+                                <td>miscmeke.even@example.com</td>
+                                <td><button class="status-badge active">Aktif</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://i.pravatar.cc/40?img=2" alt="Avatar" onerror="this.src='https://placehold.co/40x40/EEE/777?text=MM'; this.onerror=null;">
+                                        <span>Marvin McKinney</span>
+                                    </div>
+                                </td>
+                                <td>debbie.baker@example.com</td>
+                                <td><button class="status-badge active">Aktif</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://i.pravatar.cc/40?img=3" alt="Avatar" onerror="this.src='https://placehold.co/40x40/EEE/777?text=JC'; this.onerror=null;">
+                                        <span>Jane Cooper</span>
+                                    </div>
+                                </td>
+                                <td>kerri.lawson@example.com</td>
+                                <td><button class="status-badge inactive">Tidak Aktif</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://i.pravatar.cc/40?img=4" alt="Avatar" onerror="this.src='https://placehold.co/40x40/EEE/777?text=BC'; this.onerror=null;">
+                                        <span>Bessie Cooper</span>
+                                    </div>
+                                </td>
+                                <td>felicia.reid@example.com</td>
+                                <td><button class="status-badge active">Aktif</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://i.pravatar.cc/40?img=5" alt="Avatar" onerror="this.src='https://placehold.co/40x40/EEE/777?text=LA'; this.onerror=null;">
+                                        <span>Leslie Alexander</span>
+                                    </div>
+                                </td>
+                                <td>tim.jennings@example.com</td>
+                                <td><button class="status-badge inactive">Tidak Aktif</button></td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://i.pravatar.cc/40?img=6" alt="Avatar" onerror="this.src='https://placehold.co/40x40/EEE/777?text=GH'; this.onerror=null;">
+                                        <span>Guy Hawkins</span>
+                                    </div>
+                                </td>
+                                <td>alma.lawson@example.com</td>
+                                <td><button class="status-badge active">Aktif</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://i.pravatar.cc/40?img=7" alt="Avatar" onerror="this.src='https://placehold.co/40x40/EEE/777?text=TW'; this.onerror=null;">
+                                        <span>Theresa Webb</span>
+                                    </div>
+                                </td>
+                                <td>debra.holt@example.com</td>
+                                <td><button class="status-badge active">Aktif</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <nav class="pagination" aria-label="Navigasi halaman">
+                    <a href="#" class="page-arrow" aria-label="Halaman sebelumnya">&laquo;</a>
+                    <a href="#" class="page-number active" aria-current="page">1</a>
+                    <a href="#" class="page-number">2</a>
+                    <a href="#" class="page-number">3</a>
+                    <a href="#" class="page-number">4</a>
+                    <span class="page-dots">...</span>
+                    <a href="#" class="page-number">10</a>
+                    <a href="#" class="page-arrow" aria-label="Halaman berikutnya">&raquo;</a>
+                </nav>
+            </section>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

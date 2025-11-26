@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk - Nusantara Explorer For Kids</title>
+  <link rel="stylesheet" href="masuk.css" />
+</head>
+<body>
+  <div class="container-masuk">
+    <div class="form-section">
+      <h2>Selamat Datang Kembali !</h2>
+      <p class="subtitle">Masuk</p>
+
+      <form>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Masukkan email" required>
+
+        <label for="password">Password</label>
+        <div class="password-input">
+        <input type="password" id="password" placeholder="Buat Password" required>
+        <button type="button" class="button-password" onclick="togglePasswordVisibility()"><img src="aset/hide.png" width="20"></button>
+        </div>
+
+        <a href="#" class="forgot">Lupa password?</a>
+
+        <button type="submit" class="btn-masuk">Masuk</button>
+      </form>
+
+      <div class="divider">
+        <hr><span>Atau</span><hr>
+      </div>
+
+      <div class="social-login">
+        <button class="social google"><img src="aset/google.png"></button>
+        <button class="social apple"><img src="aset/apple.png"></button>
+        <button class="social facebook"><img src="aset/facebook.png"></button>
+      </div>
+
+      <p class="login-text">Belum punya akun? <a href="daftar.html" id="register-link">Daftar</a></p>
+    </div>
+
+    <div class="image-section">
+      <img src="aset/daftarlogin.jpeg">
+    </div>
+  </div>
+  <script src="masuk.js"></script>
+</body>
+</html>

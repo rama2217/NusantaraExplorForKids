@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Nusantara for kids</title>
+    <link rel="stylesheet" href="setting.css"> 
+</head>
+<body>
+<div class="dashboard-container"> 
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+<img src="../aset/logoNexkids.png" 
+           alt="NexKids Logo" 
+           class="logo">
+      
+      <div class="admin-profile">
+          <img src="https://i.pravatar.cc/150?img=12"
+               alt="Admin" 
+               class="profile-pic">
+          <span class="profile-name">Martin</span>
+      </div>
+  </div>
+  
+<nav class="sidebar-nav">
+    <ul>
+        <li><a href="dashboard.html">
+            <img src="../aset/information.png" alt="Data Pengguna Icon" class="sidebar-icon"> 
+            <span>Data Pengguna</span>
+        </a></li>
+        <li><a href="keloladata.html">
+            <img src="../aset/add.png" alt="Tambah Media Icon" class="sidebar-icon"> 
+            <span>Kelola data</span>
+        </a></li>
+        <li class="active"><a href="setting.html"> 
+            <img src="../aset/settings.png" alt="Settings Icon" class="sidebar-icon"> 
+            <span>Settings</span>
+        </a></li>
+        <li class="logout-item"><a href="#" id="logout-btn">
+            <img src="../aset/logout.png" alt="Keluar Icon" class="sidebar-icon"> 
+            <span>Keluar</span>
+        </a></li>
+    </ul>
+</nav>
+<button class="toggle-sidebar" id="toggle-sidebar" title="Perkecil Menu">
+      <span>➔</span>
+</button>
+</aside>
+
+<main class="main-content">
+    <header class="main-header">
+        <h1>⚙️ Pengaturan Sistem</h1>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" title="Buka Menu">☰</button>
+    </header>
+
+    <section class="settings-grid">
+        <div class="card setting-card">
+            <h2>Akun Admin</h2>
+            <p class="muted">Ubah nama, email, atau kata sandi Anda.</p>
+            <form id="accountSettingsForm">
+                <div class="form-group">
+                    <label for="adminName">Nama Lengkap</label>
+                    <input type="text" id="adminName" name="adminName" value="Martin">
+                </div>
+                <div class="form-group">
+                    <label for="adminEmail">Email</label>
+                    <input type="email" id="adminEmail" name="adminEmail" value="martin.admin@nekids.com">
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Kata Sandi Baru</label>
+                    <input type="password" id="adminPassword" name="adminPassword" placeholder="Biarkan kosong jika tidak ingin diubah">
+                </div>
+                <button type="submit" class="btn primary">Simpan Akun</button>
+            </form>
+        </div>
+
+        <div class="card setting-card">
+            <h2>Pengaturan Umum</h2>
+            <p class="muted">Pengaturan default untuk konten dan sistem.</p>
+            <form id="generalSettingsForm">
+                <div class="form-group">
+                    <label for="defaultLanguage">Bahasa Default</label>
+                    <select id="defaultLanguage" name="defaultLanguage">
+                        <option value="id" selected>Bahasa Indonesia</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="defaultVisibility">Visibilitas Konten Default</label>
+                    <select id="defaultVisibility" name="defaultVisibility">
+                        <option value="public" selected>Publik</option>
+                        <option value="private">Pribadi</option>
+                        <option value="unlisted">Tersembunyi (unlisted)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn primary">Simpan Umum</button>
+            </form>
+        </div>
+
+        <div class="card setting-card full-width">
+            <h2>Notifikasi & Privasi</h2>
+            <form id="notificationSettingsForm">
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="emailNotif" name="emailNotif" checked>
+                    <label for="emailNotif">Kirim pemberitahuan email untuk aktivitas penting</label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="dataSharing" name="dataSharing">
+                    <label for="dataSharing">Izinkan berbagi data anonim untuk peningkatan sistem</label>
+                </div>
+                <button type="submit" class="btn primary">Simpan Notifikasi</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+</div>
+
+
+<script src="setting.js"></script>
+</body>
+</html>

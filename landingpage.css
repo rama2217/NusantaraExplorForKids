@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "Fredoka";
+  src: url("aset/Fredoka/static/Fredoka-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 90px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-masuk {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: #ffa62b;
+  color: #000000;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-daftar {
+  background-color: #ffa62b;
+  color: #000000;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* === HERO SECTION === */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ade8f4;
+  padding: 60px 80px;
+}
+
+.hero-text {
+  max-width: 45%;
+}
+
+.hero-text h1 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #0f1b5d;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn-petualang {
+  background-color: #ffa62b;
+  border: none;
+  width: 310px;
+  height: 53px;
+  padding: 12px 28px;
+  border-radius: 66px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-petualang:hover {
+  transform: scale(1.05);
+}
+.btn-petualang a {
+  color: #000000;
+  text-underline-position: none;
+}
+
+.hero-image img {
+  width: 665px;
+  height: 368px;
+  border-radius: 67px;
+}
+
+/* === FITUR === */
+.fitur-section {
+  text-align: center;
+  padding: 120px 60px;
+  background-color: #ffffff;
+  min-height: 930px;
+}
+
+.fitur-section h2 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  margin-top: none;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #0f1b5d;
+}
+
+.fitur-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  row-gap: 30px;
+  justify-content: center;
+  align-items: start;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 400px;
+  height: 280px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 105px;
+  margin-bottom: 15px;
+}
+.card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.card h3 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  color: #0f1b5d;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #ade8f4;
+  min-height: 5px;
+  margin-top: 90px;
+  padding: 60px 100px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  color: #0f1b5d;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  font-weight: 600;
+}
+
+.footer p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #000000;
+  margin: 0;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 75%;
+  padding-bottom: 10px;
+}
+.logo-footer img {
+  width: 183px;
+  height: 69;
+  display: block;
+}
+
+.tentangkami,
+.alamatkami,
+.kontakkami {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.alamatkami {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.alamatkami .alamat-icn {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.alamatkami img {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+
+.footer-flexbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-flexbox img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.footer-flexbox img:hover {
+  transform: scale(1.1);
+}
+
+.footer .contact-info img {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #000000;
+}

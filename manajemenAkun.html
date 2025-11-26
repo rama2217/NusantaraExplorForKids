@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Akun - NEXKIDS</title>
+  <link rel="stylesheet" href="manajemenAkun.css">
+  <script defer src="panel-akun.js"></script>
+</head>
+<body>
+  
+<header class="navbar">
+    <div class="logo">
+      <a href ="landingpagesdlg.html"><img src="aset/logoNexkids.png" alt="Logo NEXKIDS"></a>
+    </div>
+    </nav>
+      <div class="user-icon">
+      <button class="user-iconbtn"><a href="manajemenAkun.html"><img src="aset/user.png" class="active" alt="User"></a></button>      
+      </div>
+</header>
+
+<div class="container">
+<aside class="sidebar">           
+    <div class="profile">
+     <div class="profile-picture"><img src="aset/indoapr95j.png"></div>
+     <div class="profile-name">Rizki Alamsyah</div>
+     <div class="profile-role">Petualang Cilik</div>
+    </div>
+
+<ul class="menu">
+   <li class="menu-item active">
+        <img src="aset/dashboard.png">
+       Dasbor
+   </li>
+   <li class="menu-item" onclick="window.location.href='profilsaya.html'">
+       <img src="aset/usermanajemen.png">
+       Profil Saya
+   </li>
+   <li class="menu-item" onclick="window.location.href='koleksilencana.html'">
+          <img src="aset/stamp-collecting.png">
+       Koleksi Lencana
+   </li>
+   <li class="menu-item" onclick="window.location.href='kemajuansaya.html'">
+       <img src="aset/progres.png">
+       Kemajuan Saya
+   </li>
+   <li class="menu-item" onclick="window.location.href='masuk.html'">
+       <img src="aset/logout.png">
+       Keluar Akun
+   </li>
+ </ul>
+</aside>
+
+
+<main class="main-content">
+    <section class="welcome-section">
+        <div class="welcome-text">
+            <h2>Halo, Rizki !</h2>
+            <p>Petualang Cilik</p>
+        </div>
+        <div class="welcome-img"><img src="aset/anak.png"></div>
+    </section>     
+    <section class="collections-section">
+        <h3 class="section-title">Koleksi Lencana Saya</h3>
+        <div class="badge-container">
+            <div class="badge red">🎭</div>
+            <div class="badge orange">📦</div>
+            <div class="badge green">🏛️</div>
+            <div class="badge blue">🐠</div>
+            <div class="badge teal">🌳</div>
+        </div>
+        <div class="badge-info">
+            <span>📊</span>
+            <span>8 Lencana Terkumpul</span>
+        </div>
+        <a href="koleksilencana.html"><button class="see-all-btn">Lihat Semua Lencana</button></a>
+    </section>     
+    <section class="progress-section">
+        <h3 class="section-title">Kemajuan Saya</h3>
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+    </section>
+</main>
+</div>
+</body>
+<script src="manajemenAkun.js"></script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Nusantara</title>
+    <link rel="stylesheet" href="peta.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+      <img src="aset/logoNexkids.png" alt="Logo NEXKIDS">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="landingpagesdlg.html">Beranda</a></li>
+        <li><a href="#peta" class="active">Peta</a></li>
+        <li><a href="videoanimasi.html">Video</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="lencana.html">Lencana</a></li>
+      </ul>
+    </nav>
+      <div class="user-icon">
+      <button class="user-iconbtn"><a href="manajemenAkun.html"><img src="aset/user.png" alt="User"></a></button>      
+      </div>
+</header>
+
+  <section id="peta">
+            <!-- Main Content -->
+    <div class="content-section">
+        <!-- Title -->
+        <div class="title-section">
+            <h1>Peta Nusantara</h1>
+            <p>Klik provinsi untuk melihat budaya yang ada</p>
+        </div>
+
+        <!-- Province Grid -->
+        <div class="province-grid">
+            <!-- Row 1 -->
+            <div class="province-item">
+                <div class="province-map"> <img src= "aset/Jabar.png"></div>
+                <button class="province-button">Jawa Barat</button>
+            </div>
+            <div class="province-item">
+                <div class="province-map"><img src ="aset/jateng.png"></div>
+                <button class="province-button">Jawa Tengah</button>
+            </div>
+            <div class="province-item">
+                <div class="province-map"> <img src ="aset/Jatim.png"></div>
+                <button class="province-button">Jawa Timur</button>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="province-item">
+                <div class="province-map"><img src ="aset/Bali.svg"></div>
+                <button class="province-button">Bali</button>
+            </div>
+            <div class="province-item">
+                <div class="province-map"><img src ="aset/NTB.svg"></div>
+                <button class="province-button">Nusa Tenggara Barat</button>
+            </div>
+            <div class="province-item">
+                <div class="province-map"><img src ="aset/NTT.svg"></div>
+                <button class="province-button">Nusa Tenggara Timur</button>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="province-item">
+                <div class="province-map"><img src ="aset/Suamtera Utara.png"></div>
+                <button class="province-button">Sumatera Utara</button>
+            </div>
+            <div class="province-item">
+                <div class="province-map"><img src ="aset/Sumatera Barat.png"></div>
+                <button class="province-button">Sumatera Barat</button>
+            </div>
+            <div class="province-item">
+                <div class="province-map"><img src ="aset/Sumatera Selatan.png"></div>
+                <button class="province-button">Sumatera Selatan</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Modal Pop-up -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <!-- Modal Header -->
+        <div class="modal-header" id="modalHeader">
+            <button class="close-button" onclick="closeModal()">×</button>
+            <h2 id="modalTitle">Provinsi</h2>
+            <p>Yuk kenali budaya dan keindahan daerah ini! 🌟</p>
+            <div class="modal-map" id="modalIcon">🗺️</div>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="tab active" onclick="showTab('budaya')">
+                    <span>🎭</span> Budaya
+                </button>
+                <button class="tab" onclick="showTab('wisata')">
+                    <span>🏛️</span> Wisata
+                </button>
+                <button class="tab" onclick="showTab('kuliner')">
+                    <span>🍜</span> Kuliner
+                </button>
+                <button class="tab" onclick="showTab('seni')">
+                    <span>🎨</span> Seni
+                </button>
+            </div>
+            
+            <!-- Content Container (akan diisi oleh JavaScript) -->
+            <div id="contentContainer"></div>
+<script src="popuppeta.js"></script>
+</body>
+</html>

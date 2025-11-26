@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Akun - NEXKIDS</title>
+  <link rel="stylesheet" href="kemajuansaya.css">
+</head>
+<body>
+  
+<header class="navbar">
+    <div class="logo">
+      <a href ="landingpagesdlg.html"><img src="aset/logoNexkids.png" alt="Logo NEXKIDS"></a>
+    </div>
+  <div class="user-icon">
+        <button class="user-iconbtn" class="active"><img src="aset/user.png" alt="User"></button>
+      </div>
+  </header>
+
+<div class="container">
+<aside class="sidebar">           
+    <div class="profile">
+     <div class="profile-picture"><img src="aset/indoapr95j.png"></div>
+     <div class="profile-name">Rizki Alamsyah</div>
+     <div class="profile-role">Petualang Cilik</div>
+    </div>
+
+<ul class="menu">
+   <li class="menu-item" onclick="window.location.href='manajemenAkun.html'">
+        <img src="aset/dashboard.png">
+       Dasbor</a>
+   </li>
+   <li class="menu-item" onclick="window.location.href='profilsaya.html'">
+       <img src="aset/usermanajemen.png">
+       Profil Saya
+   </li>
+   <li class="menu-item" onclick="window.location.href='koleksilencana.html'">
+          <img src="aset/stamp-collecting.png">
+       Koleksi Lencana
+   </li>
+   <li class="menu-item active" >
+       <img src="aset/progres.png">
+       Kemajuan Saya
+   </li>
+   <li class="menu-item" onclick="window.location.href='masuk.html'">
+       <img src="aset/logout.png">
+       Keluar Akun
+   </li>
+ </ul>
+</aside>
+
+
+   <main class="main-content">
+
+<div class="progress-header">
+    <h1>Kemajuan Saya</h1>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card video">
+        <div class="stat-icon">📺</div>
+        <div class="stat-info">
+            <h3 class="stat-number" data-target="24">0</h3>
+            <p class="stat-label">Video Ditonton</p>
+        </div>
+    </div>           
+    <div class="stat-card game">
+        <div class="stat-icon">🎮</div>
+        <div class="stat-info">
+            <h3 class="stat-number" data-target="4">0</h3>
+            <p class="stat-label">Game Dimainkan</p>
+        </div>
+    </div>           
+    <div class="stat-card province">
+        <div class="stat-icon">🗺️</div>
+        <div class="stat-info">
+            <h3 class="stat-number" data-target="38">0</h3>
+            <p class="stat-label">Provinsi Terjelajahi</p>
+        </div>
+    </div>           
+    <div class="stat-card points">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-info">
+            <h3 class="stat-number" data-target="1250">0</h3>
+            <p class="stat-label">Total Poin</p>
+        </div>
+    </div>           
+</div>       
+
+<div class="activities-section">
+    <div class="section-header">
+        <h2>Aktivitas Terakhir</h2>
+        <div class="header-actions">
+            <div class="activity-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="video">Video</button>
+                <button class="filter-btn" data-filter="game">Game</button>
+            </div>
+    </div>
+</div>           
+<div class="activities-grid">
+
+<div class="activity-card" data-type="video">
+    <div class="activity-thumbnail video-thumb">
+        <img src="aset/video-thumb1.jpg" alt="Video" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-icon\'>▶️</div>'">
+        <div class="activity-type-badge video-badge">Video</div>
+    </div>
+    <div class="activity-info">
+        <h4>Video pakaian adat Bali</h4>
+        <p>Belajar tentang pakaian tradisional Bali</p>
+        <div class="activity-meta">
+            <span class="activity-date">📅 2 Jam yang lalu</span>
+            <span class="activity-points">+50 Poin</span>
+        </div>
+    </div>
+</div>               
+
+<div class="activity-card" data-type="game">
+    <div class="activity-thumbnail game-thumb">
+        <img src="aset/game-thumb1.jpg" alt="Game" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-icon\'>🎯</div>'">
+        <div class="activity-type-badge game-badge">Game</div>
+    </div>
+    <div class="activity-info">
+        <h4>Game tebak gambar rumah adat</h4>
+        <p>Menyelesaikan 10 level dengan skor tinggi</p>
+        <div class="activity-meta">
+            <span class="activity-date">📅 5 Jam yang lalu</span>
+            <span class="activity-points">+100 Poin</span>
+        </div>
+    </div>
+</div>               
+
+<div class="activity-card" data-type="game">
+    <div class="activity-thumbnail game-thumb">
+        <img src="aset/game-thumb2.jpg" alt="Game" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-icon\'>🎲</div>'">
+        <div class="activity-type-badge game-badge">Game</div>
+    </div>
+    <div class="activity-info">
+        <h4>Game tebak gambar tarian</h4>
+        <p>Mengenal tarian tradisional Indonesia</p>
+        <div class="activity-meta">
+            <span class="activity-date">📅 1 Hari yang lalu</span>
+            <span class="activity-points">+75 Poin</span>
+        </div>
+    </div>
+</div>               
+
+<div class="activity-card" data-type="video">
+    <div class="activity-thumbnail video-thumb">
+        <img src="aset/video-thumb2.jpg" alt="Video" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-icon\'>▶️</div>'">
+        <div class="activity-type-badge video-badge">Video</div>
+    </div>
+    <div class="activity-info">
+        <h4>Budaya Jawa Timur</h4>
+        <p>Mempelajari kebudayaan Jawa Timur</p>
+        <div class="activity-meta">
+            <span class="activity-date">📅 1 Hari yang lalu</span>
+            <span class="activity-points">+50 Poin</span>
+        </div>
+    </div>
+</div>               
+
+<div class="activity-card" data-type="quiz">
+    <div class="activity-thumbnail quiz-thumb">
+        <img src="aset/quiz-thumb1.jpg" alt="Kuis" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-icon\'>❓</div>'">
+        <div class="activity-type-badge quiz-badge">Kuis</div>
+    </div>
+    <div class="activity-info">
+        <h4>Kuis Budaya Nusantara</h4>
+        <p>Menyelesaikan kuis dengan skor 90%</p>
+        <div class="activity-meta">
+            <span class="activity-date">📅 2 Hari yang lalu</span>
+            <span class="activity-points">+120 Poin</span>
+        </div>
+    </div>
+</div>         
+
+<div class="activity-card" data-type="video">
+    <div class="activity-thumbnail video-thumb">
+        <img src="aset/video-thumb3.jpg" alt="Video" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-icon\'>▶️</div>'">
+        <div class="activity-type-badge video-badge">Video</div>
+    </div>
+    <div class="activity-info">
+        <h4>Tari Saman dari Aceh</h4>
+        <p>Menonton video tarian tradisional Aceh</p>
+    <div class="activity-meta">
+        <span class="activity-date">📅 3 Hari yang lalu</span>
+        <span class="activity-points">+50 Poin</span>
+    </div>
+    </div>
+    </div>
+    </div>          
+    <button class="load-more-btn">Muat Lebih Banyak</button>
+</div>       
+</main>
+<script src="kemajuansaya.js"></script>
+</body>
+</html>

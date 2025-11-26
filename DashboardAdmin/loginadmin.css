@@ -1,0 +1,136 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Container ===== */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Gambar kiri ===== */
+.image-side {
+  flex: 1;
+  background-color: #fafafa;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Form kanan ===== */
+.form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 50px;
+  position: relative;
+}
+
+.form-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-box h2 {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 160px;
+  margin: 8px 0;
+}
+
+.welcome {
+  font-weight: 500;
+  color: #000000ff;
+  margin-bottom: 25px;
+}
+
+/* ===== Input Group ===== */
+#loginForm {
+  width: 100%;
+  max-width: 320px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 45px 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #f7a11a;
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== Tombol Login ===== */
+.login-btn {
+  width: 100%;
+  background-color: #ffb845;
+  color: #000000;
+  font-weight: 600;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #f59e0b;
+  transform: translateY(-2px);
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
