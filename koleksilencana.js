@@ -24,70 +24,54 @@ window.addEventListener('load', () => {
 // Badge Data
 const badgesData = {
     1: {
-        title: 'Seniman Budaya',
-        description: 'Menyelesaikan tur museum seni',
-        details: 'Kamu telah mengunjungi Museum Nasional dan mempelajari berbagai karya seni tradisional Indonesia. Lencana ini diberikan sebagai penghargaan atas dedikasi kamu dalam melestarikan budaya.',
+        title: 'Penjelajah Peta',
+        description: 'Menyelesaikan tur peta nusantara',
+        details: 'Kamu telah menjelajahi peta nusantara dan mempelajari berbagai wilayah di Indonesia. Lencana ini diberikan sebagai penghargaan atas dedikasi kamu dalam mengenal Indonesia.',
         date: '15 Januari 2025',
-        color: 'red',
-        category: 'budaya'
+        category: 'geografi'
     },
     2: {
-        title: 'Penjelajah Sejarah',
-        description: 'Mengunjungi 5 situs bersejarah',
-        details: 'Kamu telah menjelajahi 5 situs bersejarah penting di Indonesia, termasuk Candi Borobudur, Candi Prambanan, dan situs-situs lainnya. Pengetahuan sejarah kamu sangat luar biasa!',
+        title: 'Alat Musik Tradisional',
+        description: 'Mempelajari alat musik tradisional',
+        details: 'Kamu telah mempelajari berbagai alat musik tradisional Indonesia seperti angklung, gamelan, dan sasando. Pengetahuan musik tradisional kamu sangat luar biasa!',
         date: '20 Januari 2025',
-        color: 'orange',
-        category: 'sejarah'
+        category: 'budaya'
     },
     3: {
-        title: 'Arkeolog Cilik',
-        description: 'Menemukan artefak tersembunyi',
-        details: 'Dengan ketelitian yang tinggi, kamu berhasil menemukan 10 artefak tersembunyi dalam permainan petualangan. Kamu memiliki mata yang tajam!',
+        title: 'Baju Adat',
+        description: 'Melihat 5 video baju adat',
+        details: 'Dengan antusias, kamu telah menonton 5 video tentang baju adat dari berbagai daerah di Indonesia. Kamu memiliki pengetahuan yang bagus tentang budaya Indonesia!',
         date: '25 Januari 2025',
-        color: 'green',
-        category: 'sejarah'
+        category: 'budaya'
     },
     4: {
-        title: 'Penjaga Laut',
-        description: 'Belajar ekosistem laut',
-        details: 'Kamu telah mempelajari ekosistem laut Indonesia dan menyelesaikan kuis tentang kehidupan bawah laut dengan sempurna. Laut Indonesia bangga padamu!',
+        title: 'Rumah Adat',
+        description: 'Belajar rumah adat',
+        details: 'Kamu telah mempelajari berbagai jenis rumah adat Indonesia dari Sabang sampai Merauke. Pengetahuan arsitektur tradisional kamu sangat mengesankan!',
         date: '1 Februari 2025',
-        color: 'blue',
-        category: 'alam'
+        category: 'budaya'
     },
     5: {
-        title: 'Pelaut Handal',
-        description: 'Menyelesaikan petualangan laut',
-        details: 'Petualangan laut telah selesai! Kamu telah menjelajahi berbagai pulau dan mempelajari kehidupan maritim Indonesia. Selamat berlayar, pelaut cilik!',
+        title: 'Tarian Tradisional',
+        description: 'Mempelajari tarian tradisional',
+        details: 'Kamu telah mempelajari berbagai tarian tradisional Indonesia seperti tari Saman, tari Kecak, dan tari Pendet. Semangat belajar kamu luar biasa!',
         date: '5 Februari 2025',
-        color: 'cyan',
-        category: 'alam'
+        category: 'budaya'
     },
     6: {
-        title: 'Kameramen Junior',
-        description: 'Buat 10 video dokumentasi',
-        details: 'Untuk mendapatkan lencana ini, kamu harus membuat 10 video dokumentasi tentang budaya Indonesia. Saat ini kamu sudah membuat 3 video. Semangat!',
+        title: 'Video Junior',
+        description: 'Melihat 10 video',
+        details: 'Untuk mendapatkan lencana ini, kamu harus menonton 10 video tentang budaya Indonesia. Saat ini kamu sudah menonton 3 video. Semangat!',
         locked: true,
         progress: '3/10',
-        color: 'yellow',
         category: 'teknologi'
     },
     7: {
-        title: 'Ahli Kuliner',
-        description: 'Pelajari 15 resep tradisional',
-        details: 'Pelajari dan praktekkan 15 resep masakan tradisional Indonesia untuk mendapatkan lencana ini. Saat ini kamu sudah menyelesaikan 5 resep.',
-        locked: true,
-        progress: '5/15',
-        color: 'gold',
-        category: 'budaya'
-    },
-    8: {
-        title: 'Master Budaya',
+        title: 'Penjelajah Setia',
         description: 'Selesaikan semua petualangan',
         details: 'Lencana tertinggi! Untuk mendapatkan lencana ini, kamu harus menyelesaikan SEMUA petualangan dan mendapatkan SEMUA lencana lainnya. Ayo terus berpetualang!',
         locked: true,
-        progress: '5/7 lencana',
-        color: 'purple',
+        progress: '5/6 lencana',
         category: 'master'
     }
 };
@@ -104,7 +88,7 @@ badgeItems.forEach(item => {
         const badge = badgesData[badgeId];
         
         if (badge) {
-            showBadgeModal(badge);
+            showBadgeModal(badge, badgeId);
             
             // Trigger confetti for unlocked badges
             if (!badge.locked) {
@@ -115,14 +99,18 @@ badgeItems.forEach(item => {
 });
 
 // Show Badge Modal
-function showBadgeModal(badge) {
+function showBadgeModal(badge, badgeId) {
     const modalBadgeCircle = document.querySelector('.modal-badge-circle');
     const modalTitle = document.getElementById('modalTitle');
     const modalDescription = document.getElementById('modalDescription');
     const modalDetails = document.getElementById('modalDetails');
     
-    // Set badge circle color and icon
-    modalBadgeCircle.className = `modal-badge-circle badge-circle ${badge.color}`;
+    // Get the image source from the clicked badge
+    const clickedBadge = document.querySelector(`[data-badge="${badgeId}"]`);
+    const imgSrc = clickedBadge.querySelector('.badge-circle img').src;
+    
+    // Set badge image in modal
+    modalBadgeCircle.innerHTML = `<img src="${imgSrc}" alt="${badge.title}">`;
     
     // Set content
     modalTitle.textContent = badge.title;
@@ -234,6 +222,8 @@ sortSelect.addEventListener('change', function() {
 // Confetti Animation
 function triggerConfetti() {
     const canvas = document.getElementById('confettiCanvas');
+    if (!canvas) return;
+    
     const ctx = canvas.getContext('2d');
     
     canvas.width = window.innerWidth;
@@ -289,14 +279,6 @@ function triggerConfetti() {
     animate();
 }
 
-// Function for Logout
-function handleLogout() {
-    if (confirm('Apakah kamu yakin ingin keluar dari akun NEXKIDS?')) {
-        alert('Terima kasih sudah berpetualang! Sampai jumpa lagi! 👋');
-        window.location.href = 'masuk.html';
-    }
-}
-
 // Count unlocked badges
 const unlockedBadges = document.querySelectorAll('.badge-item.unlocked').length;
 const totalBadges = document.querySelectorAll('.badge-item').length;
@@ -305,7 +287,10 @@ document.querySelector('.total-badges').textContent = totalBadges;
 
 // Update progress bar
 const progressPercentage = (unlockedBadges / totalBadges) * 100;
-document.querySelector('.progress-bar').setAttribute('data-progress', progressPercentage.toFixed(1));
+const progressBar = document.querySelector('.progress-bar');
+if (progressBar) {
+    progressBar.setAttribute('data-progress', progressPercentage.toFixed(1));
+}
 
 // Add pulse animation to unlocked badges on load
 setTimeout(() => {

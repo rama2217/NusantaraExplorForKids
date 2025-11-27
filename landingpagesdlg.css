@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Fredoka";
+  src: url("aset/Fredoka/static/Fredoka-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +31,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
-  color: #333;
+  color: #000000ff;
 }
 
 /* === NAVBAR === */
@@ -63,7 +87,6 @@ body {
   margin-right: 50px;
   margin-left: 20px;
 }
-
 
 /* === HERO SECTION === */
 .hero-section {
@@ -164,7 +187,6 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-
 }
 
 .card img {
@@ -294,55 +316,55 @@ body {
   .navbar {
     padding: 15px 40px;
   }
-  
+
   .nav-links {
     gap: 40px;
   }
-  
+
   .nav-links a {
     font-size: 14px;
   }
-  
+
   /* Hero Section */
   .hero-section {
     padding: 50px 40px;
   }
-  
+
   .hero-text h1 {
     font-size: 36px;
   }
-  
+
   .hero-text p {
     font-size: 15px;
   }
-  
+
   .btn-petualang {
     width: 280px;
     height: 50px;
     font-size: 18px;
   }
-  
+
   .hero-image img {
     width: 500px;
     height: 276px;
   }
-  
+
   /* Fitur Section */
   .fitur-section {
     padding: 80px 40px;
     min-height: auto;
   }
-  
+
   .fitur-section h2 {
     font-size: 32px;
   }
-  
+
   .fitur-grid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
     column-gap: 20px;
   }
-  
+
   .card {
     width: 100%;
     max-width: 380px;
@@ -350,12 +372,12 @@ body {
     min-height: 260px;
     margin: 0 auto;
   }
-  
+
   /* Footer */
   .footer {
     padding: 50px 40px;
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr 2fr 1fr 1fr;
     gap: 30px;
@@ -369,123 +391,126 @@ body {
     padding: 12px 20px;
     flex-wrap: wrap;
   }
-  
+
   .logo img {
     height: 35px;
   }
-  
+
   .nav-links {
     display: none;
   }
-  
+
   .nav-btn {
     gap: 10px;
   }
-  
-  .btn-masuk, .btn-daftar {
+
+  .btn-masuk,
+  .btn-daftar {
     font-size: 13px;
     padding: 6px 14px;
   }
-  
+
   /* Hero Section */
   .hero-section {
     flex-direction: column;
     padding: 40px 20px;
     text-align: center;
   }
-  
+
   .hero-text {
     max-width: 100%;
     margin-bottom: 30px;
   }
-  
+
   .hero-text h1 {
     font-size: 28px;
   }
-  
+
   .hero-text p {
     font-size: 14px;
   }
-  
+
   .btn-petualang {
     width: 100%;
     max-width: 280px;
     height: 48px;
     font-size: 16px;
   }
-  
+
   .hero-image img {
     width: 100%;
     max-width: 450px;
     height: auto;
   }
-  
+
   /* Fitur Section */
   .fitur-section {
     padding: 60px 20px;
   }
-  
+
   .fitur-section h2 {
     font-size: 28px;
     margin-bottom: 40px;
   }
-  
+
   .fitur-grid {
     grid-template-columns: 1fr;
     row-gap: 20px;
   }
-  
+
   .card {
     width: 100%;
     max-width: 100%;
     height: auto;
     min-height: 240px;
   }
-  
+
   .card h3 {
     font-size: 22px;
     margin-top: 30px;
   }
-  
+
   .card img {
     height: 90px;
   }
-  
+
   /* Footer */
   .footer {
     padding: 40px 20px;
     margin-top: 60px;
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .logo-footer {
     order: -1;
     justify-content: center;
     height: auto;
     padding-bottom: 20px;
   }
-  
+
   .logo-footer img {
     width: 150px;
   }
-  
-  .tentangkami, .alamatkami, .kontakkami {
+
+  .tentangkami,
+  .alamatkami,
+  .kontakkami {
     text-align: center;
     align-items: center;
   }
-  
+
   .alamatkami .alamat-icn {
     justify-content: center;
   }
-  
+
   .footer-flexbox {
     justify-content: center;
   }
-  
+
   .footer .copyright {
     font-size: 12px;
     margin-top: 30px;
@@ -498,31 +523,32 @@ body {
   .navbar {
     padding: 10px 15px;
   }
-  
+
   .logo img {
     height: 30px;
   }
-  
-  .btn-masuk, .btn-daftar {
+
+  .btn-masuk,
+  .btn-daftar {
     font-size: 12px;
     padding: 5px 12px;
   }
-  
+
   /* Hero Section */
   .hero-section {
     padding: 30px 15px;
   }
-  
+
   .hero-text h1 {
     font-size: 24px;
     margin-bottom: 12px;
   }
-  
+
   .hero-text p {
     font-size: 13px;
     margin-bottom: 20px;
   }
-  
+
   .btn-petualang {
     width: 100%;
     max-width: 250px;
@@ -530,60 +556,60 @@ body {
     font-size: 15px;
     padding: 10px 20px;
   }
-  
+
   .hero-image img {
     width: 100%;
     border-radius: 20px;
   }
-  
+
   /* Fitur Section */
   .fitur-section {
     padding: 50px 15px;
   }
-  
+
   .fitur-section h2 {
     font-size: 24px;
     margin-bottom: 30px;
   }
-  
+
   .card {
     padding: 18px;
     min-height: 220px;
   }
-  
+
   .card h3 {
     font-size: 20px;
     margin-top: 25px;
   }
-  
+
   .card p {
     font-size: 13px;
   }
-  
+
   .card img {
     height: 80px;
     margin-bottom: 12px;
   }
-  
+
   /* Footer */
   .footer {
     padding: 30px 15px;
     margin-top: 50px;
   }
-  
+
   .footer h4 {
     font-size: 14px;
     margin-bottom: 12px;
   }
-  
+
   .footer p {
     font-size: 9px;
   }
-  
+
   .logo-footer img {
     width: 130px;
   }
-  
+
   .footer .copyright {
     font-size: 11px;
     margin-top: 25px;
@@ -635,7 +661,7 @@ body {
     background: white;
     padding: 20px 0;
     gap: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transform: translateY(-300px);
     opacity: 0;
     pointer-events: none;
@@ -686,10 +712,8 @@ body {
 
   .hamburger {
     position: absolute;
-    right: 20px;   /* Jarak dari kanan */
+    right: 20px; /* Jarak dari kanan */
     top: 50%;
     transform: translateY(-50%);
   }
 }
-
-

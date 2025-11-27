@@ -234,6 +234,114 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 165, 2, 0.3);
 }
+/* === MODAL STYLES === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  padding: 50px 40px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-modal:hover {
+  color: #000;
+  transform: rotate(90deg);
+}
+
+.modal-profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #78c841;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.modal-profile-photo img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 40%;
+}
+
+.modal-edit-btn {
+  background: #ffa502;
+  color: white;
+  border: none;
+  padding: 12px 60px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(255, 165, 2, 0.3);
+}
+
+.modal-edit-btn:hover {
+  background: #ff8c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 165, 2, 0.4);
+}
 
 .profile-form {
   display: flex;

@@ -32,7 +32,10 @@
         <div class="title-section">
             <h1>Peta Nusantara</h1>
             <p>Klik provinsi untuk melihat budaya yang ada</p>
-        </div>
+<div class="search-container">
+    <input type="text" id="province-search" placeholder="Cari provinsi...">
+</div>
+ </div>
 
         <!-- Province Grid -->
         <div class="province-grid">
@@ -92,23 +95,7 @@
         </div>
 
         <!-- Modal Body -->
-        <div class="modal-body">
-            <!-- Category Tabs -->
-            <div class="category-tabs">
-                <button class="tab active" onclick="showTab('budaya')">
-                    <span>🎭</span> Budaya
-                </button>
-                <button class="tab" onclick="showTab('wisata')">
-                    <span>🏛️</span> Wisata
-                </button>
-                <button class="tab" onclick="showTab('kuliner')">
-                    <span>🍜</span> Kuliner
-                </button>
-                <button class="tab" onclick="showTab('seni')">
-                    <span>🎨</span> Seni
-                </button>
-            </div>
-            
+        <div class="modal-body">            
             <!-- Content Container (akan diisi oleh JavaScript) -->
             <div id="contentContainer"></div>
 <script src="popuppeta.js"></script>

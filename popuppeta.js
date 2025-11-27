@@ -5,24 +5,10 @@ const provinceData = {
   "Jawa Barat": {
     mapImage: "aset/gedungsate.svg",
     budaya: [
-      { icon: "💃", image: "", title: "Tari Jaipong", desc: "Tarian energik yang penuh keceriaan dari Jawa Barat" },
-      { icon: "👘", image: "", title: "Kebaya Sunda", desc: "Pakaian tradisional yang cantik dan elegan" },
-      { icon: "📖", image: "", title: "Legenda Sangkuriang", desc: "Cerita rakyat tentang asal usul Tangkuban Perahu" }
-    ],
-    wisata: [
-      { icon: "🌋", image: "", title: "Tangkuban Perahu", desc: "Gunung berapi dengan kawah yang menakjubkan" },
-      { icon: "🎢", image: "", title: "Trans Studio Bandung", desc: "Taman hiburan indoor terbesar di Indonesia" },
-      { icon: "🌳", image: "", title: "Kawah Putih", desc: "Danau kawah berwarna hijau tosca yang indah" }
-    ],
-    kuliner: [
-      { icon: "🍲", image: "", title: "Batagor", desc: "Baso tahu goreng dengan saus kacang yang gurih" },
-      { icon: "🥟", image: "", title: "Siomay", desc: "Dimsum Indonesia yang lezat dan sehat" },
-      { icon: "🍛", image: "", title: "Nasi Timbel", desc: "Nasi dibungkus daun pisang dengan lauk tradisional" }
-    ],
-    seni: [
-      { icon: "🎵", image: "", title: "Angklung", desc: "Alat musik bambu yang merdu dan unik" },
-      { icon: "🎪", image: "", title: "Wayang Golek", desc: "Boneka kayu untuk pertunjukan cerita tradisional" },
-      { icon: "🎨", image: "", title: "Batik Mega Mendung", desc: "Motif batik khas dengan pola awan yang indah" }
+      { icon: "💃", title: "Tari Jaipong", desc: "Tarian pergaulan yang energik, memadukan tradisi <b> pencak silat, ketuk tilu, dan ronggeng </b>. Dicirikan oleh gerakan bahu dan pinggul yang lincah." },
+      { icon: "🎵", title: "Angklung", desc: "Alat musik bambu tradisional yang dimainkan dengan digoyangkan. Sudah diakui oleh <b> UNESCO </b> sebagai Warisan Budaya Tak Benda Dunia." },
+      { icon: "🎭", title: "Wayang Golek", desc: "Pertunjukan teater boneka kayu (golek) yang dimainkan oleh dalang. Sering membawakan cerita epik <b> Mahabharata </b> dan kisah lokal Sunda." },
+      { icon: "👘", title: "Pakaian Adat Sunda", desc: "Pria mengenakan <b> Baju Bedahan </b> atau Jas Tutup, sedangkan wanita mengenakan <b> Kebaya Sunda </b> dan kain batik <b>parang</b> atau <b>lereng</b>." }
     ],
     facts: [
       "Jawa Barat punya lebih dari 20 gunung berapi!",
@@ -32,26 +18,12 @@ const provinceData = {
     ]
   },
   "Jawa Tengah": {
-    mapImage: "aset/borobudur.svg",
-    budaya: [
-      { icon: "💃", title: "Tari Serimpi", desc: "Tarian klasik yang anggun dari keraton" },
-      { icon: "👘", title: "Kebaya Jawa", desc: "Pakaian tradisional dengan kebaya dan kain batik" },
-      { icon: "📖", title: "Legenda Roro Jonggrang", desc: "Kisah tentang asal mula Candi Prambanan" }
-    ],
-    wisata: [
-      { icon: "🏛️", title: "Candi Borobudur", desc: "Candi Buddha terbesar di dunia" },
-      { icon: "⛰️", title: "Dieng Plateau", desc: "Dataran tinggi dengan pemandangan indah" },
-      { icon: "🏰", title: "Keraton Surakarta", desc: "Istana kerajaan dengan budaya Jawa yang kental" }
-    ],
-    kuliner: [
-      { icon: "🍗", title: "Ayam Goreng Kalasan", desc: "Ayam goreng bumbu rempah yang terkenal" },
-      { icon: "🍜", title: "Soto Kudus", desc: "Soto ayam dengan kuah gurih khas Kudus" },
-      { icon: "🥘", title: "Gudeg", desc: "Nangka muda dimasak dengan santan dan gula Jawa" }
-    ],
-    seni: [
-      { icon: "🎭", title: "Wayang Kulit", desc: "Pertunjukan bayangan dengan cerita pewayangan" },
-      { icon: "🥁", title: "Gamelan", desc: "Ensemble musik tradisional Jawa" },
-      { icon: "🎨", title: "Batik Solo", desc: "Batik dengan motif klasik yang rumit" }
+    mapImage: "aset/candiborobudur.png",
+  budaya: [
+      { icon: "🎭", title: "Wayang Kulit", desc: "Pertunjukan bayangan semalam suntuk dengan boneka kulit, diiringi Gamelan. Dalang berperan penting dalam menyampaikan cerita dan ajaran moral." },
+      { icon: "💃", title: "Tari Serimpi", desc: "Tarian klasik keraton yang anggun dan sakral, ditarikan oleh <b>empat penari wanita</b> yang melambangkan empat unsur (api, air, udara, tanah)." },
+      { icon: "🎨", title: "Batik Jawa Klasik", desc: "Kain batik dari Solo dan Yogyakarta, dicirikan oleh warna <b>sogan</b> (coklat) dan motif-motif filosofis seperti <b>Parang</b> dan <b>Kawung</b>." },
+      { icon: "🏠", title: "Rumah Joglo", desc: "Rumah adat dengan ciri khas atap utama berbentuk perahu terbalik dan tiang utama (<b>soko guru</b>), melambangkan status sosial dan arsitektur yang kokoh." }
     ],
     facts: [
       "Borobudur adalah candi Buddha terbesar di dunia",
@@ -61,26 +33,12 @@ const provinceData = {
     ]
   },
   "Jawa Timur": {
-    mapImage: "aset/bromo.svg",
+    mapImage: "aset/bromo.png",
     budaya: [
-      { icon: "💃", title: "Tari Remo", desc: "Tarian pembuka yang energik dari Jawa Timur" },
-      { icon: "👘", title: "Lurik", desc: "Kain tenun tradisional dengan garis-garis" },
-      { icon: "📖", title: "Cerita Surabaya", desc: "Legenda Sura dan Baya yang jadi nama kota" }
-    ],
-    wisata: [
-      { icon: "🌋", title: "Gunung Bromo", desc: "Gunung berapi dengan sunrise yang spektakuler" },
-      { icon: "🏖️", title: "Pantai Malang", desc: "Pantai-pantai indah di pesisir selatan" },
-      { icon: "🏛️", title: "Trowulan", desc: "Situs bekas ibu kota Kerajaan Majapahit" }
-    ],
-    kuliner: [
-      { icon: "🍲", title: "Rawon", desc: "Sup daging hitam dengan bumbu kluwak" },
-      { icon: "🥙", title: "Sate Madura", desc: "Sate kambing dengan bumbu kacang yang khas" },
-      { icon: "🍜", title: "Rujak Cingur", desc: "Rujak dengan cingur (hidung sapi) yang unik" }
-    ],
-    seni: [
-      { icon: "🎭", title: "Ludruk", desc: "Teater komedi tradisional Jawa Timur" },
-      { icon: "🎪", title: "Reog Ponorogo", desc: "Pertunjukan dengan topeng dadak merak yang besar" },
-      { icon: "🎨", title: "Batik Madura", desc: "Batik dengan warna-warna cerah dan berani" }
+      { icon: "🎪", title: "Reog Ponorogo", desc: "Tarian kolosal dengan <b>Singa Barong</b> (topeng berkepala macan berbulu merak) yang berat dan dimainkan dengan gigi. Melambangkan keperkasaan dan semangat kepahlawanan." },
+      { icon: "💃", title: "Tari Remo", desc: "Tarian pembuka yang dinamis, awalnya ditarikan oleh pria, dengan gerakan khas seperti silat, hentakan kaki, dan selendang yang diayunkan." },
+      { icon: "🎭", title: "Ludruk", desc: "Teater rakyat tradisional yang menceritakan kehidupan sehari-hari masyarakat dalam bahasa Jawa Timuran, diselingi lawak (<b>dagelan</b>) dan lagu." },
+      { icon: "🗡️", title: "Carok", desc: "Tradisi Suku Madura yang melibatkan pertarungan kehormatan menggunakan senjata <b>Celurit</b>. Kini lebih sering diinterpretasikan dalam seni pertunjukan." }
     ],
     facts: [
       "Gunung Bromo terkenal dengan pemandangan sunrisenya",
@@ -92,24 +50,10 @@ const provinceData = {
   "Bali": {
     mapImage: "aset/borobudur.svg",
     budaya: [
-      { icon: "💃", title: "Tari Kecak", desc: "Tarian dengan iringan suara 'cak' dari para penari" },
-      { icon: "👘", title: "Kebaya Bali", desc: "Pakaian tradisional dengan selendang songket" },
-      { icon: "📖", title: "Legenda Tanah Lot", desc: "Cerita tentang pura di atas batu karang" }
-    ],
-    wisata: [
-      { icon: "🏛️", title: "Pura Besakih", desc: "Pura terbesar dan tersuci di Bali" },
-      { icon: "🏖️", title: "Pantai Kuta", desc: "Pantai terkenal dengan sunset yang indah" },
-      { icon: "🌾", title: "Tegallalang", desc: "Sawah terasering yang sangat fotogenik" }
-    ],
-    kuliner: [
-      { icon: "🍖", title: "Babi Guling", desc: "Babi panggang bumbu khas Bali yang gurih" },
-      { icon: "🦆", title: "Bebek Betutu", desc: "Bebek bumbu rica yang dibakar dengan api kecil" },
-      { icon: "🍢", title: "Sate Lilit", desc: "Sate ikan cincang yang dililitkan di bambu" }
-    ],
-    seni: [
-      { icon: "🎭", title: "Barong Dance", desc: "Tarian sakral dengan kostum barong yang megah" },
-      { icon: "🎵", title: "Gamelan Bali", desc: "Musik gamelan dengan tempo yang lebih cepat" },
-      { icon: "🎨", title: "Lukisan Ubud", desc: "Seni lukis dengan gaya naturalis khas Bali" }
+      { icon: "💃", title: "Tari Kecak", desc: "Tarian drama tanpa iringan musik, ditarikan oleh puluhan pria yang duduk melingkar dan menyerukan kata <b>'cak-cak-cak'</b>. Menceritakan kisah Ramayana." },
+      { icon: "🏛️", title: "Sistem Subak", desc: "Organisasi pengairan sawah tradisional yang diakui <b>UNESCO</b>. Melambangkan filosofi <b>Tri Hita Karana</b> (keseimbangan antara manusia, alam, dan Tuhan)." },
+      { icon: "📖", title: "Upacara Ngaben", desc: "Upacara pembakaran jenazah umat Hindu di Bali, sebagai simbol pembersihan roh dan pengembalian unsur-unsur tubuh ke alam." },
+      { icon: "🎵", title: "Gamelan Bali", desc: "Musik ansambel yang dicirikan oleh <b>tempo yang cepat</b>, suara yang lantang, dan ritme yang kompleks dan energik." }
     ],
     facts: [
       "Bali punya lebih dari 20.000 pura (kuil Hindu)",
@@ -119,26 +63,12 @@ const provinceData = {
     ]
   },
   "Nusa Tenggara Barat": {
-    mapImage: "aset/NTB.svg", // ✅ Tambahkan ini
-    budaya: [
-      { icon: "💃", title: "Tari Gandrung", desc: "Tarian pergaulan yang ceria dari Lombok" },
-      { icon: "👘", title: "Tenun Lombok", desc: "Kain tenun dengan motif tradisional Sasak" },
-      { icon: "📖", title: "Putri Mandalika", desc: "Legenda putri yang terjun ke laut" }
-    ],
-    wisata: [
-      { icon: "🏔️", title: "Gunung Rinjani", desc: "Gunung tertinggi kedua di Indonesia" },
-      { icon: "🏖️", title: "Pantai Pink", desc: "Pantai dengan pasir berwarna merah muda" },
-      { icon: "🏝️", title: "Gili Trawangan", desc: "Pulau cantik tanpa kendaraan bermotor" }
-    ],
-    kuliner: [
-      { icon: "🍗", title: "Ayam Taliwang", desc: "Ayam bakar pedas khas Lombok" },
-      { icon: "🥘", title: "Plecing Kangkung", desc: "Kangkung dengan sambal tomat yang pedas" },
-      { icon: "🍜", title: "Sate Bulayak", desc: "Sate dengan lontong yang dibungkus daun lontar" }
-    ],
-    seni: [
-      { icon: "🎵", title: "Gendang Beleq", desc: "Gendang besar dengan suara yang menggelegar" },
-      { icon: "🎪", title: "Peresean", desc: "Pertarungan tongkat tradisional Sasak" },
-      { icon: "🧶", title: "Tenun Ikat", desc: "Teknik tenun dengan pola yang diikat dulu" }
+    mapImage: "aset/NTB.svg", 
+   budaya: [
+      { icon: "🎪", title: "Peresean", desc: "Pertarungan tradisional Suku Sasak yang menggunakan <b>tongkat rotan</b> dan perisai kulit (<b>ende</b>). Melambangkan kejantanan dan keberanian." },
+      { icon: "👘", title: "Tenun Ikat Sasak", desc: "Kain tenun khas Lombok, sering menampilkan motif geometris dan flora/fauna lokal. Diturunkan dari ibu ke anak sebagai warisan budaya." },
+      { icon: "🎵", title: "Gendang Beleq", desc: "Alat musik perkusi berupa dua gendang besar yang dimainkan oleh <b>banyak pemain</b> dalam upacara adat Suku Sasak, menghasilkan suara yang megah." },
+      { icon: "💃", title: "Tari Gandrung", desc: "Tarian pergaulan yang sering dibawakan untuk menyambut tamu, diiringi alat musik tradisional seperti Gendang dan Rincik." }
     ],
     facts: [
       "Gunung Rinjani memiliki danau Segara Anak di puncaknya",
@@ -148,26 +78,12 @@ const provinceData = {
     ]
   },
   "Nusa Tenggara Timur": {
-    mapImage: "aset/NTT.svg", // ✅ Tambahkan ini
+    mapImage: "aset/NTT.svg", 
     budaya: [
-      { icon: "💃", title: "Tari Caci", desc: "Tarian perang dengan cambuk dan perisai" },
-      { icon: "👘", title: "Tenun Ikat NTT", desc: "Tenun dengan motif tradisional yang rumit" },
-      { icon: "📖", title: "Legenda Komodo", desc: "Cerita tentang putri naga yang jadi komodo" }
-    ],
-    wisata: [
-      { icon: "🦎", title: "Pulau Komodo", desc: "Habitat asli komodo, kadal terbesar di dunia" },
-      { icon: "🏖️", title: "Pantai Pink Komodo", desc: "Pantai dengan pasir pink yang langka" },
-      { icon: "⛰️", title: "Kelimutu", desc: "Gunung dengan 3 danau kawah berwarna berbeda" }
-    ],
-    kuliner: [
-      { icon: "🌽", title: "Jagung Bose", desc: "Bubur jagung dengan kacang merah" },
-      { icon: "🐟", title: "Ikan Sei", desc: "Ikan asap khas NTT yang gurih" },
-      { icon: "🥘", title: "Rumpu Rampe", desc: "Sayuran rebus dengan sambal lu'at" }
-    ],
-    seni: [
-      { icon: "🎵", title: "Sasando", desc: "Alat musik petik dari daun lontar" },
-      { icon: "🗿", title: "Rumah Adat", desc: "Rumah tradisional dengan atap jerami tinggi" },
-      { icon: "🧶", title: "Tenun Rote", desc: "Tenun dengan motif geometris yang khas" }
+      { icon: "🎵", title: "Sasando", desc: "Alat musik petik dari Pulau Rote yang unik, terbuat dari anyaman daun lontar dan bambu. Bunyinya merdu menyerupai <b>harpa</b>." },
+      { icon: "👘", title: "Tenun Ikat NTT", desc: "Kain tenun dengan warna dan motif yang sangat beragam. Setiap pulau (Sumba, Flores, Timor) memiliki motif, warna, dan <b>makna ritual</b> yang berbeda." },
+      { icon: "🗡️", title: "Tari Caci", desc: "Tarian perang Suku Manggarai (Flores) yang melibatkan pertarungan cambuk (<b>Caci</b>) dan perisai. Digelar sebagai bagian dari upacara adat." },
+      { icon: "🏠", title: "Uma Lengge", desc: "Rumah adat khas Bima (Sumbawa) yang berbentuk panggung dengan atap kerucut. Digunakan juga sebagai lumbung penyimpanan hasil panen." }
     ],
     facts: [
       "Komodo hanya ada di pulau Komodo dan Rinca",
@@ -179,24 +95,10 @@ const provinceData = {
   "Sumatera Utara": {
     mapImage: "aset/sumut.svg",
     budaya: [
-      { icon: "💃", title: "Tari Tor-Tor", desc: "Tarian sakral suku Batak dengan gerakan khas" },
-      { icon: "👘", title: "Ulos", desc: "Kain tenun tradisional Batak yang indah" },
-      { icon: "📖", title: "Si Boru Deak Parujar", desc: "Legenda putri yang cantik dari Danau Toba" }
-    ],
-    wisata: [
-      { icon: "🏞️", title: "Danau Toba", desc: "Danau vulkanik terbesar di Asia Tenggara" },
-      { icon: "🏝️", title: "Pulau Samosir", desc: "Pulau di tengah Danau Toba" },
-      { icon: "🌳", title: "Bukit Lawang", desc: "Tempat rehabilitasi orangutan Sumatera" }
-    ],
-    kuliner: [
-      { icon: "🍖", title: "Babi Panggang Karo", desc: "Babi panggang khas suku Karo yang gurih" },
-      { icon: "🐟", title: "Arsik", desc: "Ikan mas dengan bumbu andaliman yang unik" },
-      { icon: "🍲", title: "Saksang", desc: "Daging babi dengan bumbu khas Batak" }
-    ],
-    seni: [
-      { icon: "🎵", title: "Gondang Sabangunan", desc: "Ensemble musik tradisional Batak" },
-      { icon: "🏠", title: "Rumah Bolon", desc: "Rumah adat Batak dengan atap melengkung" },
-      { icon: "🎨", title: "Gorga", desc: "Ukiran khas Batak dengan warna hitam, merah, putih" }
+      { icon: "👘", title: "Ulos", desc: "Kain tenun tradisional Batak yang sakral, diberikan dalam upacara adat sebagai simbol <b>restu, kasih sayang, dan perlindungan</b>. Jenisnya memiliki fungsi yang berbeda-beda." },
+      { icon: "💃", title: "Tari Tor-Tor", desc: "Tarian tradisional yang sarat makna ritual Suku Batak, diiringi musik <b>Gondang</b>. Gerakan tangan dan kaki sederhana, namun penuh penghayatan." },
+      { icon: "🏠", title: "Rumah Bolon", desc: "Rumah adat Batak Toba yang berbentuk panggung dengan atap melengkung menyerupai <b>punggung kerbau</b>. Dindingnya dihiasi ukiran <b>Gorga</b>." },
+      { icon: "🎵", title: "Gondang Sabangunan", desc: "Ansambel musik tradisional yang terdiri dari 5 jenis alat musik perkusi (sarune, ogung, hesek, dll.), mengiringi Tari Tor-Tor dan upacara adat." }
     ],
     facts: [
       "Danau Toba terbentuk dari letusan supervulkan 74.000 tahun lalu",
@@ -208,24 +110,10 @@ const provinceData = {
   "Sumatera Barat": {
     mapImage: "aset/sumbar.svg",
     budaya: [
-      { icon: "💃", title: "Tari Piring", desc: "Tarian dengan piring di tangan yang spektakuler" },
-      { icon: "👘", title: "Baju Bundo Kanduang", desc: "Pakaian adat Minangkabau yang elegan" },
-      { icon: "📖", title: "Legenda Malin Kundang", desc: "Cerita anak durhaka yang jadi batu" }
-    ],
-    wisata: [
-      { icon: "🏞️", title: "Danau Maninjau", desc: "Danau kaldera dengan pemandangan indah" },
-      { icon: "⛰️", title: "Ngarai Sianok", desc: "Lembah hijau yang menakjubkan" },
-      { icon: "🏖️", title: "Pantai Carocok", desc: "Pantai dengan pulau kecil yang eksotis" }
-    ],
-    kuliner: [
-      { icon: "🍛", title: "Rendang", desc: "Daging sapi bumbu rempah, makanan terenak di dunia!" },
-      { icon: "🥘", title: "Gulai Kepala Ikan", desc: "Gulai dengan bumbu kuning yang kaya rempah" },
-      { icon: "🍢", title: "Sate Padang", desc: "Sate dengan kuah kental berwarna kuning" }
-    ],
-    seni: [
-      { icon: "🎵", title: "Saluang", desc: "Seruling bambu khas Minangkabau" },
-      { icon: "🏠", title: "Rumah Gadang", desc: "Rumah adat dengan atap melengkung seperti tanduk kerbau" },
-      { icon: "🗡️", title: "Silat Minang", desc: "Seni bela diri tradisional Minangkabau" }
+      { icon: "🏠", title: "Rumah Gadang", desc: "Rumah adat Minangkabau yang memiliki atap berbentuk melengkung tajam (<b>gonjong</b>) seperti <b>tanduk kerbau</b>. Melambangkan sistem <b>Matrilineal</b> (garis keturunan ibu)." },
+      { icon: "💃", title: "Tari Piring", desc: "Tarian tradisional yang menyajikan piring di telapak tangan penari. Bagian klimaks, penari akan menari di atas pecahan piring." },
+      { icon: "🗡️", title: "Silat Minang", desc: "Seni bela diri tradisional yang dikenal cepat, luwes, dan sering digabungkan dengan tarian (<b>Silek</b>). Filosofinya mengajarkan kesabaran dan kearifan." },
+      { icon: "📖", title: "Adat Basandi Syarak", desc: "Filosofi Minangkabau: <b>Adat Bersendikan Syariat, Syariat Bersendikan Kitabullah</b>. Menekankan ketaatan pada ajaran Islam." }
     ],
     facts: [
       "Rendang dinobatkan sebagai makanan terenak di dunia",
@@ -237,24 +125,10 @@ const provinceData = {
   "Sumatera Selatan": {
     mapImage: "aset/sumsel.svg",
     budaya: [
-      { icon: "💃", title: "Tari Gending Sriwijaya", desc: "Tarian penyambutan tamu yang anggun" },
-      { icon: "👘", title: "Songket Palembang", desc: "Kain tenun dengan benang emas atau perak" },
-      { icon: "📖", title: "Legenda Sriwijaya", desc: "Kisah kerajaan maritim yang besar" }
-    ],
-    wisata: [
-      { icon: "🌉", title: "Jembatan Ampera", desc: "Ikon kota Palembang yang megah" },
-      { icon: "🏛️", title: "Benteng Kuto Besak", desc: "Benteng peninggalan Kesultanan Palembang" },
-      { icon: "🏞️", title: "Pulau Kemaro", desc: "Pulau kecil dengan legenda cinta tragis" }
-    ],
-    kuliner: [
-      { icon: "🍜", title: "Pempek", desc: "Ikan tenggiri giling dengan saus cuko yang asam pedas" },
-      { icon: "🥘", title: "Tekwan", desc: "Sup bola ikan dengan soun dan jamur" },
-      { icon: "🍲", title: "Model", desc: "Ikan gabus dengan bumbu kuning khas Palembang" }
-    ],
-    seni: [
-      { icon: "🎵", title: "Musik Gambus", desc: "Musik dengan alat musik petik khas Arab-Melayu" },
-      { icon: "🚣", title: "Perahu Bidar", desc: "Perahu tradisional untuk lomba balap" },
-      { icon: "🎨", title: "Kain Jumputan", desc: "Kain dengan teknik pewarnaan ikat celup" }
+      { icon: "👘", title: "Songket Palembang", desc: "Kain tenun tradisional mewah dengan hiasan benang <b>emas atau perak</b> yang rumit. Merupakan simbol kemuliaan dan status sosial sejak zaman Sriwijaya." },
+      { icon: "💃", title: "Tari Gending Sriwijaya", desc: "Tarian penyambutan tamu kehormatan yang anggun, melambangkan keramahan dan kemuliaan <b>Kerajaan Sriwijaya</b> di masa lampau." },
+      { icon: "🏛️", title: "Bongkeng", desc: "Pakaian Adat pernikahan yang mencolok dengan warna merah, berhiaskan mahkota (Aesan Gede) dan perhiasan emas yang mewah." },
+      { icon: "📖", title: "Syair Siti Zubaidah", desc: "Karya sastra klasik Melayu berupa syair panjang yang populer di Palembang, mengisahkan perjuangan dan kesetiaan seorang wanita." }
     ],
     facts: [
       "Sriwijaya adalah kerajaan maritim terbesar di Asia Tenggara",
@@ -332,19 +206,6 @@ function closeModalOnOverlay(event) {
   if (event.target === document.getElementById('modalOverlay')) {
     closeModal();
   }
-}
-
-// Fungsi untuk mengganti tab
-function showTab(tabName) {
-  // Remove active class dari semua tab
-  const tabs = document.querySelectorAll('.tab');
-  tabs.forEach(tab => tab.classList.remove('active'));
-
-  // Add active class ke tab yang diklik
-  event.target.closest('.tab').classList.add('active');
-
-  // Load konten sesuai tab
-  loadContent(tabName, window.currentProvinceData);
 }
 
 // Fungsi untuk load konten berdasarkan kategori

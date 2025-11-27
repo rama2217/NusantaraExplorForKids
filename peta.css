@@ -93,6 +93,36 @@ body {
   color: #000000;
   font-weight: 400;
 }
+/* === Fitur Pencarian === */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 0 60px;
+}
+
+#province-search {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: url("aset/search.png") no-repeat 10px center; /* Ganti 'aset/search.png' dengan path ikon search Anda */
+  background-size: 20px;
+  background-color: #f9f9f9;
+}
+
+#province-search::placeholder {
+  color: #a0a0a0;
+}
+
+#province-search:focus {
+  border-color: #ff9100ff;
+  box-shadow: 0 0 5px rgba(255, 145, 0, 0.5);
+  outline: none;
+}
 
 /* Province Grid */
 .province-grid {
@@ -357,44 +387,54 @@ body {
   padding: 40px 30px;
 }
 
-/* Category Tabs */
-.category-tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.tab {
-  background: #f3f4f6;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.tab:hover,
-.tab.active {
-  background: #ffa62b;
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Content Grid */
+/* Content Grid (Modifikasi untuk Horizontal Scroll) */
 .content-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex; 
   gap: 20px;
+  overflow-x: auto; 
+  padding-bottom: 20px; 
   animation: fadeIn 0.3s ease;
   width: 100%;
+}
+
+/* Pastikan item tidak menyusut dan memiliki lebar minimum agar bisa di-scroll */
+.content-item {
+  flex-shrink: 0; 
+  width: 300px; 
+  max-width: 100%;
+
+}
+/* Menghilangkan scrollbar (opsional, untuk tampilan lebih bersih) */
+.content-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.content-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.content-grid::-webkit-scrollbar-thumb {
+  background: #ffa62b;
+  border-radius: 5px;
+}
+.content-grid::-webkit-scrollbar-thumb:hover {
+  background: #ff8c00;
+}
+
+
+/* RESPONSIVE: Sesuaikan lebar item di layar kecil */
+@media (max-width: 768px) {
+  .content-grid {
+    
+  }
+  .content-item {
+    width: 250px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .content-item {
+    width: 90vw; 
+  }
 }
 
 .content-item {

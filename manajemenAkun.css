@@ -220,53 +220,41 @@ body {
 }
 
 .badge {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  /* Menghapus bentuk lingkaran dan latar belakang warna */
+  border-radius: 0;
+  background: none !important;
+  box-shadow: none; 
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 35px;
+  font-size: initial; 
   cursor: pointer;
   transition: transform 0.3s;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk gambar di dalam badge di manajemenAkun */
+.badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.15));
 }
 
 .badge:hover {
   transform: scale(1.15) rotate(5deg);
 }
 
-.badge.red {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-}
-
-.badge.orange {
-  background: linear-gradient(135deg, #ffa502 0%, #ff8c00 100%);
-}
-
-.badge.green {
-  background: linear-gradient(135deg, #26de81 0%, #20bf6b 100%);
-}
-
-.badge.blue {
-  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-}
-
-.badge.teal {
-  background: linear-gradient(135deg, #20bf6b 0%, #01a3a4 100%);
-}
-
-.badge-info {
+.badge-info p {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: #666;
+  color: #000000;
   font-size: 16px;
   margin-top: 15px;
-}
-
-.badge-info span:first-child {
-  font-size: 24px;
+  padding-left: 6px;
+  font-weight: 500;
 }
 
 .see-all-btn {

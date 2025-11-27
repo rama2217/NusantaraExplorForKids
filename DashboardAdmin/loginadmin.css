@@ -1,4 +1,27 @@
-
+@font-face {
+  font-family: "Fredoka";
+  src: url("aset/Fredoka/static/Fredoka-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -112,6 +135,10 @@ body {
 }
 
 /* ===== Tombol Login ===== */
+.login-btn a{
+  text-decoration: none;
+  color: #000000;
+}
 .login-btn {
   width: 100%;
   background-color: #ffb845;

@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Fredoka";
+  src: url("aset/Fredoka/static/Fredoka-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("aset/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -389,6 +413,7 @@ body {
   transform: translateY(-5px);
 }
 
+/* Badge Circle - TANPA BACKGROUND WARNA */
 .badge-circle {
   width: 120px;
   height: 120px;
@@ -398,8 +423,9 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 60px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: transparent;
   transition: transform 0.3s;
+  position: relative;
 }
 
 .badge-item:hover .badge-circle {
@@ -407,41 +433,16 @@ body {
 }
 
 .badge-circle img {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
-.badge-circle.red {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-}
-
-.badge-circle.orange {
-  background: linear-gradient(135deg, #ffa502 0%, #ff8c00 100%);
-}
-
-.badge-circle.green {
-  background: linear-gradient(135deg, #26de81 0%, #20bf6b 100%);
-}
-
-.badge-circle.blue {
-  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-}
-
-.badge-circle.cyan {
-  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-}
-
-.badge-circle.yellow {
-  background: linear-gradient(135deg, #ffd500 0%, #ffb800 100%);
-}
-
-.badge-circle.gold {
-  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-}
-
-.badge-circle.purple {
-  background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+/* Badge locked state - gambar lebih transparan */
+.badge-item.locked .badge-circle img {
+  opacity: 0.5;
+  filter: grayscale(60%) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
 .badge-info h3 {
@@ -537,6 +538,7 @@ body {
   color: #333;
 }
 
+/* Modal Badge Circle - TANPA BACKGROUND WARNA */
 .modal-badge-circle {
   width: 150px;
   height: 150px;
@@ -546,7 +548,15 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 80px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  position: relative;
+}
+
+.modal-badge-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
 }
 
 .modal-content h2 {
@@ -586,6 +596,11 @@ body {
 .modal-close-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+/* Hidden class for filtering */
+.hidden {
+  display: none !important;
 }
 
 /* Responsive Design */

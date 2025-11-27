@@ -1,10 +1,3 @@
-// Edit Photo Button
-const editPhotoBtn = document.querySelector('.edit-photo-btn');
-if (editPhotoBtn) {
-    editPhotoBtn.addEventListener('click', function() {
-        alert('Fitur upload foto profil akan segera hadir! 📸');
-    });
-}
 
 // Toggle Password Visibility
 const togglePasswordBtn = document.querySelector('.toggle-password-btn');
@@ -167,4 +160,87 @@ function handleLogout() {
         // window.location.href = 'login.html';
         window.location.href = 'masuk.html'; // atau halaman beranda
     }
+}
+// Edit Photo Button - Show Modal
+const editPhotoBtn = document.querySelector('.edit-photo-btn');
+const photoModal = document.getElementById('photoModal');
+const closeModal = document.querySelector('.close-modal');
+const fileInput = document.getElementById('fileInput');
+const modalPreviewImage = document.getElementById('modalPreviewImage');
+const modalEditBtn = document.getElementById('modalEditBtn');
+
+if (editPhotoBtn) {
+    editPhotoBtn.addEventListener('click', function() {
+        photoModal.style.display = 'flex';
+    });
+}
+
+// Close Modal
+if (closeModal) {
+    closeModal.addEventListener('click', function() {
+        closePhotoModal();
+    });
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+    if (event.target === photoModal) {
+        closePhotoModal();
+    }
+});
+
+function closePhotoModal() {
+    photoModal.style.display = 'none';
+}
+
+// Modal Edit Button Click
+if (modalEditBtn) {
+    modalEditBtn.addEventListener('click', function() {
+        fileInput.click();
+    });
+}
+
+// File Input Change
+if (fileInput) {
+    fileInput.addEventListener('change', function(e) {
+        if (e.target.files.length > 0) {
+            handleFileSelect(e.target.files[0]);
+        }
+    });
+}
+
+// Handle File Selection
+function handleFileSelect(file) {
+    // Validate file type
+    if (!file.type.match('image.*')) {
+        showNotification('Format file tidak valid! Gunakan JPG, PNG, atau GIF ❌');
+        return;
+    }
+
+    // Validate file size (5MB)
+    if (file.size > 5 * 1024 * 1024) {
+        showNotification('Ukuran file terlalu besar! Maksimal 5MB ❌');
+        return;
+    }
+
+    // Show preview and update all profile pictures
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        // Update modal preview
+        modalPreviewImage.src = e.target.result;
+        
+        // Update all profile pictures
+        const profilePictures = document.querySelectorAll('.profile-picture img, .profile-photo img');
+        profilePictures.forEach(img => {
+            img.src = e.target.result;
+        });
+        
+        showNotification('Foto profil berhasil diperbarui! 📸✨');
+        
+        // Close modal after short delay
+        setTimeout(() => {
+            closePhotoModal();
+        }, 1000);
+    };
+    reader.readAsDataURL(file);
 }
